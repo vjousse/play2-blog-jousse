@@ -1,0 +1,163 @@
+@()(implicit request: Request[AnyContent])
+
+@progress(stars: String, sign: String) = {
+
+    @for(star <- stars) {
+        <img src="@routes.Assets.at("images/magenta-star.png")" />
+    }
+    <img src="@routes.Assets.at("images/" + (sign match {
+            case "=" => "equal.png"
+            case "+" => "arrow-up.png"
+            case "-" => "arrow-down.png"
+            case _ => "?.png"
+            }))" />
+}
+
+
+@main("CV") {
+<div class="three-fourth">
+    <h1>Préambule</h1>
+    <p>
+    <span class="dropcap1">C</span>e CV est constitué de deux parties. Vous trouverez tout d'abord mon parcours "académique", cela fait toujours bien sur un CV.</p>
+
+    <p>Ensuite vous trouverez la partie intéressante, c'est à dire ce que je suis capable de vous apporter (ce qui devrait vous importer si vous souhaitez travailler avec moi, en fait), en plus d'une vitrine de diplômes.
+    </p>
+</div>
+
+<div class="one-fourth-last">
+
+    <!-- Contacts Widget Start -->
+    <div class="one-fourth-last">
+        <h5>Informations</h5>
+        <div class="horizontal-rule"></div>
+        <ul class="widget-list">
+            <li><span class="green">Domicile : </span>Le Mans</li>
+            <li><span class="green">Âge : </span>30 ans</li>
+            <li><span class="green">Situation : </span>Marié, père de famille</li>
+        </ul>
+    </div>
+    <!-- Contacts Widget End -->
+
+
+</div>
+
+<div class="full-width">
+    <h1>Vitrine académique</h1>
+    <div class="thirty-margin-filler"></div>
+    <table border="0" cellspacing="0" cellpadding="0">
+        <tbody>
+            <tr>
+                <th>Année</th>
+                <th>Diplôme obtenu</th>
+                <th>École</th>
+            </tr>
+            <tr>
+                <td>2007 - 2011</td>
+                <td><a href="@routes.Application.show("research")">Doctorat informatique</a></td>
+                <td>Laboratoire d'Informatique de l'Université du Maine - LIUM (Le Mans)</td>
+            </tr>
+            <tr class="even">
+                <td>2005 - 2007</td>
+                <td>Master recherche informatique - Mention bien</td>
+                <td>Université du Maine (Le Mans)</td>
+            </tr>
+            <tr>
+                <td>2004 - 2005</td>
+                <td>Licence informatique - Mention bien</td>
+                <td>Université d'Angers</td>
+            </tr>
+            <tr class="even">
+                <td>1999 - 2001</td>
+                <td>DUT Informatique</td>
+                <td>Institut Universitaire Technologique de Nantes</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<div class="full-width">
+    <h1>Compétences</h1>
+    <p>Puisqu'il paraît qu'un bon tableau vaut mieux qu'un long discours, vous trouverez ci-dessous le récapitulatif de mes compétences et mes tendances actuelles. Pour le "long' discours c'est en dessous. Merci à <a href="http://www.akei.com/fr">Nico</a> pour l'inspiration concernant mes degrés de compétences (<img src="@routes.Assets.at("images/magenta-star.png")" />) et mes tendances d'apprentissage actuelles (<img src="@routes.Assets.at("images/arrow-up.png")" />,<img src="@routes.Assets.at("images/equal.png")" /> et <img src="@routes.Assets.at("images/arrow-down.png")" />).</p>
+
+
+
+    <div class="one-fourth">
+        <h6>Langages</h6>
+        <ul>
+            <li>PHP @progress("***","=")</li>
+            <li>Javascript @progress("**","+")</li>
+            <li>Python @progress("*","+")</li>
+            <li>Ruby @progress("*","+")</li>
+            <li>C++ @progress("**","=")</li>
+            <li>JAVA @progress("**","-")</li>
+            <li>SQL @progress("***","=")</li>
+        </ul>
+    </div>
+    <div class="one-fourth">
+        <h6>Frameworks</h6>
+        <ul>
+            <li>symfony 1 @progress("***","=")</li>
+            <li>Symfony2 @progress("**","+")</li>
+            <li>NodeJS @progress("*","+")</li>
+            <li>Django @progress("*","+")</li>
+            <li>Rails @progress("*","+")</li>
+            <li>Qt @progress("**","=")</li>
+            <li>Struts @progress("*","-")</li>
+        </ul>
+    </div>
+    <div class="one-fourth">
+        <h6>Outils</h6>
+        <ul>
+            <li>GNU/Linux @progress("***","+")</li>
+            <li>MAC OS X @progress("***","=")</li>
+            <li>Git @progress("**","+")</li>
+            <li>Vim @progress("**","+")</li>
+            <li>Windows @progress("**","-")</li>
+        </ul>
+    </div>
+    <div class="one-fourth-last">
+        <h6>[wildcard]</h6>
+        <ul>
+            <li>Anglais (lu, écrit, parlé) @progress("***","+")</li>
+            <li>Apprentissage automatique @progress("**","=")</li>
+            <li>Scrum @progress("**","+")</li>
+            <li>NoSQL (mongo) @progress("*","+")</li>
+        </ul>
+
+    </div>
+</div>
+
+<div class="full-width">
+    <h3>Développeur pragmatique</h3>
+    <p>
+    Comme beaucoup de personnes de ma génération, je suis tombé dans le web étant "presque" petit. J'ai commencé par <strong>PHP</strong>(3/4) avant de faire 3 ans de <strong>Java avec Struts</strong> chez <a href="http://www.nozicaa.com">Nozicaa</a> au Mans. Depuis j'ai principalement fait du <strong>symfony depuis 2006</strong>. Tout d'abord bénévolement, puis deux ans en tant que <strong>Freelance</strong>, pour finir par être <strong>directeur technique et formateur Symfony2</strong> chez <a href="http://www.knplabs.com">knpLabs</a>. Je suis actuellement employé par une sympathique start-up New Yorkaise, dénommée <a href="http://jirafe.com">Jirafe</a>, pour m'occuper de leur architecture.
+    </p>
+
+</div>
+
+<div class="full-width">
+    <h3>Formateur enthousiaste</h3>
+    <p>
+    J'aime enseigner. J'aime transmettre ce que je crois savoir de manière ludique et pédagogique. C'est ce que je me suis efforcé de faire pendant les <strong>4 années</strong> où j'ai enseigné à la <strong>Factulté du Mans</strong>. De l'enseignement du C en Licence aux algorithmes de routage réseau en Master, j'ai eu l'occasion d'enseigner beaucoup de domaines différents. <a href="http://www.knplabs.com">knpLabs</a> m'a donné l'opportunité de continuer cette activité en délivrant des <a href="http://www.knplabs.com">formations Symfony2</a>.
+    </p>
+
+    <div class="thirty-margin-filler"></div>
+    <h3>"Chef de projet" réaliste (alias ScrumMaster)</h3>
+    <p>
+    Mener à bien un projet en informatique, quelle histoire ! <strong>Respecter les délais</strong>, et donc les coûts, tout en ayant un logiciel testé et fonctionnel semble <strong>utopique</strong> pour bon nombre de personnes. Arrêtons de faire des plans sur la comète et de s'en remettre <em>"au management par le miracle"</em>.
+    </p>
+    <p>
+    <strong>Les méthodes agiles</strong> sont maintenant là pour nous aider à mener un projet informatique à bien, utilisons les. Vous pouvez aller consulter <a href="http://www.knplabs.com">un article que j'ai écrit pour knpLabs sur les méthodes agiles</a> si vous souhaitez en savoir plus. Je ne prétends pas faire de miracle (qui peut), mais je serai capable de vous éviter des catastrophes dès le début du projet. Le but étant d'avoir un logiciel fonctionnel qui apporte de la valeur ajoutée à l'utilisateur.
+    </p>
+    <p>
+    Pour finir, une rumeur court que je serais plutôt sociable tout en sachant dire non quand il faut, ça peut aider.
+    </p>
+
+    <div class="thirty-margin-filler"></div>
+    <h3>Administrateur système autonome</h3>
+    <p>
+    J'ai toujours été persuadé qu'il ne fallait pas uniquement savoir programmer pour être un développeur efficace, mais qu'avoir une connaissance système, réseau et matériel était toujours utile. Après avoir utilisé <strong>MAC OS X</strong> pendant plusieurs années, j'utilise principalement <strong>GNU/Linux</strong> comme poste de travail actuellement. J'administre régulièrement plusieurs serveurs dédiés sous <strong>FreeBSD ou Ubuntu</strong> (nginx, php-fpm, postfix, mongodb, ...) et suis amené à mettre en place VPN et autres joyeusetés réseau.
+    </p>
+</div>
+
+}

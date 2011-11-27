@@ -1,0 +1,49 @@
+@()(implicit request: Request[AnyContent])
+
+@main("Contact") {
+<!-- Content Start -->
+<div class="three-fourth">
+    <h1>Me trouver au Mans</h1>
+    <p><img src="@routes.Assets.at("images/hastone-location.png")" class="image"/></p>
+
+    <p>Même si je travaille pour <a href="http://jirafe.com">Jirafe</a> qui se situe de l'autre côté de l'atlantique, vous pouvez me trouver chez <a href="http://www.hastone.fr">Hastone</a> à 5 minutes du Mans. Le télétravail c'est bien, mais avec des collègues dans le bureau c'est encore mieux.</p>
+
+    <div class="thirty-margin-filler"></div>
+    <div class="horizontal-rule"></div>
+    <div class="thirty-margin-filler"></div>
+
+</div>
+
+    <!-- Contacts Widget Start -->
+    <div class="one-fourth-last">
+        <h5>Entreprise actuelle</h5>
+        <div class="horizontal-rule"></div>
+        <ul class="widget-list">
+            <li><span class="green"><a href="http://jirafe.com">Jirafe</a></span>, 120 West 45th Street, New York, NY 10036</li>
+            <li><span class="green">Email :</span> vincent.jousse@@jirafe.com</a></li>
+    </ul>
+</div>
+
+
+    <!-- Contacts Widget Start -->
+    <div class="one-fourth-last">
+        <h5>Où me trouver</h5>
+        <div class="horizontal-rule"></div>
+        <ul class="widget-list">
+            <li><span class="green">Hastone</span>, 6 rue des peupliers<br />ZAC de la pointe<br />72190 Sargé-lès-Le-Mans</li>
+            <li><span class="green">Téléphone :</span> 02 85 37 55 82</li>
+        </ul>
+    </div>
+
+    <div class="one-fourth-last">
+        <h5>Contact Perso</h5>
+        <div class="horizontal-rule"></div>
+        <ul class="widget-list">
+            <li><span class="green">Twitter</span> : <a href="http://twitter.com/vjousse">vjousse</a></li>
+            <li><span class="green">Github</span> : <a href="http://github.com/vjousse">vjousse</a></li>
+            <li><span class="green">Email :</span> vincent@@jousse.org</li>
+            <li><span class="green">Domicile : </span>Le Mans</li>
+        </ul>
+    </div>
+    <!-- Contacts Widget End -->
+}

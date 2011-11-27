@@ -1,0 +1,80 @@
+@(title: String, slogan: Html = Html(""))(content: Html)(implicit request: Request[AnyContent])
+
+@import tags.menu
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Vincent Jousse | @title</title>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=8" />
+  <link href='http://fonts.googleapis.com/css?family=Droid+Sans:regular,bold' rel='stylesheet' type='text/css'>
+  <link href="@routes.Assets.at("stylesheets/build.css")" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Page Wrapper Start -->
+    <div id="page-wrapper">
+
+
+        <!-- Logo Start -->
+        <div id="logo">
+          <div class="default-logo"><a href="/" class="default-logo"></a></div>
+        </div>
+        <!-- Logo End -->
+
+        <!-- Navigation Start -->
+        <div id="nav-wrapper">
+            @menu()
+        </div>
+        <!-- Navigation End -->
+
+        <div class="horizontal-rule"></div>
+
+        @slogan
+
+
+       <!-- Content Start -->
+        @content
+        <!-- Content End -->
+
+        <div class="horizontal-rule"></div>
+
+        <!-- Footer Start -->
+        <div id="footer-wrapper">
+            @menu()
+            <div id="footer-logo"></div>
+            <div id="footer-copyright">License: <a href="http://creativecommons.org/licenses/by-nc-sa/2.0/">Creative Commons by-nc-sa</a></div>
+        </div>
+        <!-- Footer End -->
+
+    </div>
+    <!-- Page Wrapper End -->
+
+<script type="text/javascript" src="@routes.Assets.at("javascripts/jquery.js")"></script>
+<script type="text/javascript" src="@routes.Assets.at("javascripts/cufon-yui.js")"></script>
+<script type="text/javascript" src="@routes.Assets.at("javascripts/cufon.fonts.js")"></script>
+<script type="text/javascript" src="@routes.Assets.at("javascripts/scripts.js")"></script>
+
+<script type="text/javascript"> Cufon.now(); </script>
+<script type="text/javascript">jQuery(document).ready(function($) { $("#twitter").tweet({username: "vjousse", count: 5}); });</script>
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-25989146-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+<a href="http://github.com/vjousse/flask-jousse"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://a248.e.akamai.net/assets.github.com/img/71eeaab9d563c2b3c590319b398dd35683265e85/687474703a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f677261795f3664366436642e706e67" alt="Fork me on GitHub"></a>
+
+</body>
+</html>
+
