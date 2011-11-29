@@ -1,4 +1,4 @@
-@(pages: List[(String, String)] = List(("Accueil", "index"),("Blog", "blog"),("Recherche","research"),("CV", "cv"), ("Concact","contact")))(implicit request: Request[AnyContent])
+@(pages: List[(String, String)] = List(("Accueil", "index"),("Blog", "blog"),("Recherche","research"),("CV", "cv"), ("Contact","contact")))(implicit request: Request[AnyContent])
 
 @current(route: String) = {
 @{if(request.uri == route || (request.uri.startsWith(route) && route != "/")) "class='current'" }
