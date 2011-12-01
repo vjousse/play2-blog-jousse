@@ -1,45 +1,58 @@
 @()(implicit request: Request[AnyContent])
 
+@sampleImage = { @routes.Assets.at("images/featured-image.png") }
+
 @main("Blog") {
-<div class="full-width">
-    <p>Je poste actuellement sur deux principaux blogs : <a href="http://www.amicalement-web.net">Amicalement-web</a> et <a href="http://www.knplabs.com/fr/blog">le blog knpLabs</a>. Vous trouverez ci-dessous les liens directs vers mes articles sur ces deux blogs. Pour faire simple, ça parle de web et de <strong>[s|S]ymfony</strong>.</p>
-</div>
-<div class="one-half">
-    <h3>Amicalement-web</h3>
-    <p>Vous trouverez directement la <a href="http://www.amicalement-web.net/author/vince/">list de mes posts sur le site</a>. Pour ceux qui n'ont pas le courage de cliquer, ci-dessous les liens directs.</p>
-    <h6><a href="http://www.amicalement-web.net/de-php-a-ruby-votre-premier-index-php-en-ruby/2011/05/23/">De PHP à Ruby : votre premier index.php en Ruby</a></h6>
+
+<!-- Content Start -->
+<div class="three-fourth">
+    <h1>Lorem Ipsum Dolor Sit Amet</h1>
     <div class="horizontal-rule"></div>
-    <h6><a href="http://www.amicalement-web.net/generer-la-documentation-symfony2/2011/03/21/">Générer la documentation Symfony2</a></h6>
+    <div class="blog-data">Posted <span class="black">07 April 2011</span> by <span class="black">Admin</span> - <span class="black">18</span> Comments</div>
     <div class="horizontal-rule"></div>
-    <h6><a href="http://www.amicalement-web.net/symfony-live-one-more-time/2011/02/28/">Symfony Live : one more time</a></h6>
+    <p>Fusce adipiscing rhoncus sem, non fringilla lacus interdum vel. Vivamus laoreet augue eu lectus porttitor eget convallis justo facilisis. Donec ultricies tempus mauris, nec viverra metus ornare et. Praesent auctor tempus ligula sed sollicitudin. Sed sollicitudin accumsan facilisis. Nulla aliquam, lacus quis varius porttitor, dolor lorem scelerisque lorem, vel sagittis purus nisl et lacus. Sagittis fringilla, massa et nunc. Fusce sollicitudin eros non mauris convallis gravida.</p>
+    <div class="medium button">Read More</div>
+
+    <div class="thirty-margin-filler"></div>
     <div class="horizontal-rule"></div>
-    <h6><a href="http://www.amicalement-web.net/doctrine2-au-revoir-activerecord-bonjour-datamapper/2011/01/03/">Doctrine2 : au revoir ActiveRecord, bonjour DataMapper !</a></h6>
+    <div class="thirty-margin-filler"></div>
+
+    <h1>Lorem Ipsum Dolor Sit Amet</h1>
     <div class="horizontal-rule"></div>
-    <h6><a href="http://www.amicalement-web.net/ma-boite-a-outils-de-developpeur-web/2010/12/14/">Ma boîte à outils de développeur (web)</a></h6>
+    <div class="blog-data">Posted <span class="black">07 April 2011</span> by <span class="black">Admin</span> - <span class="black">18</span> Comments</div>
     <div class="horizontal-rule"></div>
-    <h6><a href="http://www.amicalement-web.net/symfony-1-symfony2-et-django-sont-dans-un-bateau/2010/11/15/">symfony 1, Symfony2 et Django sont dans un bateau</a></h6>
+    <p><img src="@sampleImage" class="image" /></p>
+    <p>Fusce adipiscing rhoncus sem, non fringilla lacus interdum vel. Vivamus laoreet augue eu lectus porttitor eget convallis justo facilisis. Donec ultricies tempus mauris, nec viverra metus ornare et. Praesent auctor tempus ligula sed sollicitudin. Sed sollicitudin accumsan facilisis. Nulla aliquam, lacus quis varius porttitor, dolor lorem scelerisque lorem, vel sagittis purus nisl et lacus. Sagittis fringilla, massa et nunc. Fusce sollicitudin eros non mauris convallis gravida.</p>
+    <div class="medium button">Read More</div>
+
+    <div class="thirty-margin-filler"></div>
     <div class="horizontal-rule"></div>
-    <h6><a href="http://www.amicalement-web.net/dedibox-v3-ou-kimsufi/2010/08/30/">Dedibox V3 ou Kimsufi ?</a></h6>
+    <div class="thirty-margin-filler"></div>
+
+    <h1>Lorem Ipsum Dolor Sit Amet</h1>
     <div class="horizontal-rule"></div>
-    <h6><a href="http://www.amicalement-web.net/twitter-et-facebook-sont-has-been-utilisez-github/2010/05/26/">Twitter et Facebook sont has-been, utilisez Github !</a></h6>
+    <div class="blog-data">Posted <span class="black">07 April 2011</span> by <span class="black">Admin</span> - <span class="black">18</span> Comments</div>
     <div class="horizontal-rule"></div>
-    <h6><a href="http://www.amicalement-web.net/symfony-les-forms-et-les-forms-embarques/2010/03/08/">Symfony, les forms et les forms embarqués</a></h6>
-    <div class="horizontal-rule"></div>
-    <h6><a href="http://www.amicalement-web.net/jouer-avec-symfony-2-sur-github/2010/01/06/">Jouer avec Symfony2 sur github</a></h6>
-    <div class="horizontal-rule"></div>
-    <h6><a href="http://www.amicalement-web.net/symfony-et-les-tests/2009/10/13/">Symfony et les tests</a></h6>
-    <div class="horizontal-rule"></div>
-    <h6><a href="http://www.amicalement-web.net/support-de-symfony-dans-netbeans-acheve/2009/10/02/">Support de symfony dans Netbeans achevé !</a></h6>
-    <div class="horizontal-rule"></div>
-</div>
-<div class="one-half-last">
-    <h3>KnpLabs</h3>
-    <h6><a href="http://www.knplabs.com/fr/blog/symfony2-dic-extension">Create a Symfony2 DiC Extension</a></h6>
-    <div class="horizontal-rule"></div>
-    <h6><a href="http://www.knplabs.com/fr/blog/agile-c-est-quoi">Agile : c'est beau, c'est chaud, mais qu'est-ce que c'est ?</a></h6>
-    <div class="horizontal-rule"></div>
-    <h6><a href="http://www.knplabs.com/fr/blog/don-t-reinvent-the-wheel">Don't reinvent the wheel¿</a></h6>
+    <p><img src="@sampleImage" class="image" /></p>
+    <p>Fusce adipiscing rhoncus sem, non fringilla lacus interdum vel. Vivamus laoreet augue eu lectus porttitor eget convallis justo facilisis. Donec ultricies tempus mauris, nec viverra metus ornare et. Praesent auctor tempus ligula sed sollicitudin. Sed sollicitudin accumsan facilisis. Nulla aliquam, lacus quis varius porttitor, dolor lorem scelerisque lorem, vel sagittis purus nisl et lacus. Sagittis fringilla, massa et nunc. Fusce sollicitudin eros non mauris convallis gravida.</p>
+    <div class="medium button">Read More</div>
+
+    <div class="thirty-margin-filler"></div>
     <div class="horizontal-rule"></div>
 </div>
+
+<div class="one-fourth-last">
+
+<!-- Twitter Feed Widget Start -->
+<div class="one-fourth-last">
+    <h5>Flux Twitter</h5>
+    <div class="horizontal-rule"></div>
+    <div id="twitter"></div>
+</div>
+<!-- Twitter Feed Widget End -->
+
+</div>
+
+
 
 }

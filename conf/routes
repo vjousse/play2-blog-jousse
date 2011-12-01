@@ -4,6 +4,11 @@
 
 # Home page
 GET     /                           controllers.Application.show(page = "index")
+
+# Blog pages
+GET     /blog                       controllers.Blog.list()
+
+# Default pages
 GET     /:page                      controllers.Application.show(page)
 
 # Map static resources from the /public folder to the /assets URL path
