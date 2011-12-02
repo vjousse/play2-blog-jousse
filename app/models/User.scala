@@ -1,3 +1,4 @@
+package jousse
 package models
 import java.security.MessageDigest
 import java.math.BigInteger

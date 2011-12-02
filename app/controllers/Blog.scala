@@ -4,8 +4,8 @@ import play.api._
 import play.api.mvc._
 import play.api.data._
 
-import models._
 import views._
+import jousse.models._
 
 object Blog extends Controller {
 
