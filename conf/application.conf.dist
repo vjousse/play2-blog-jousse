@@ -7,6 +7,12 @@
 # If you deploy your application to several instances be sure to use the same key!
 application.secret=qOH2p9;8It1gQDEmlQRoPNdk]_@L<?X6BMAUU:w[MsX:4CNaLIrVNsw:5PPr7Mld
 
+# Authentication
+# ~~~~~
+
+blog.username = admin
+blog.password = admin
+
 # Database configuration
 # ~~~~~ 
 # You can declare as many datasources as you want.
