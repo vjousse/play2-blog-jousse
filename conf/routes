@@ -9,7 +9,7 @@ GET     /                           controllers.Application.show(page = "index")
 GET     /blog                       controllers.Blog.list()
 GET     /blog/login                 controllers.Blog.login()
 GET     /blog/logout                controllers.Blog.logout()
-GET     /blog/authenticate          controllers.Blog.authenticate()
+POST    /blog/authenticate          controllers.Blog.authenticate()
 
 # Default pages
 GET     /:page                      controllers.Application.show(page)

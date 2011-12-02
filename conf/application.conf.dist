@@ -11,7 +11,10 @@ application.secret=qOH2p9;8It1gQDEmlQRoPNdk]_@L<?X6BMAUU:w[MsX:4CNaLIrVNsw:5PPr7
 # ~~~~~
 
 blog.username = admin
-blog.password = admin
+
+# Use the md5 hash of (your md5 pass + md5 secretkey (use as a salt))
+# Here is the md5 for the "admin" password
+blog.password = 9db6a9f06688b2946ff257d1e98e7650
 
 # Database configuration
 # ~~~~~ 
