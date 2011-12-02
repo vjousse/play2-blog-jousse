@@ -13,24 +13,20 @@ object User {
    *
    * The values are taken from the global conf/application.con file
    */
-  def authenticate(username: String, password: String): Option[User] = {
-
-    val adminUsername = conf("blog.username") getOrElse("")
-    val adminPassword = conf("blog.password") getOrElse("")
-    val secretKey = conf("application.secret") getOrElse("")
-
-    if (
-      adminUsername == username &&
-      adminPassword == md5AsString(md5AsString(password) + md5AsString(secretKey))
-    )
-      Some(User(username, password))
-    else
-      None
-  }
+  def authenticate(username: String, password: String): Option[User] = for {
+      adminUsername <- conf("blog.username")
+      adminPassword <- conf("blog.password")
+      secretKey     <- conf("application.secret")
+      hashPass      <- md5AsString(password)
+      hashSecret    <- md5AsString(secretKey)
+      hash          <- md5AsString(hashPass + hashSecret)
+      if adminUsername == username
+      if adminPassword == hash
+    } yield User(username, password)
 
   private def conf(key: String) = Play.unsafeApplication.configuration get key map (_.value)
 
-  private def md5AsString(s: String) = {
+  private def md5AsString(s: String) = Error.unsafeOption {
 
     //We love JAVA, yes we do. Repeat after me
     val digest = MessageDigest.getInstance("MD5").digest(s.getBytes("UTF-8"))
