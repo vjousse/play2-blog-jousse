@@ -33,7 +33,7 @@ object Blog extends Controller with Secured {
   def authenticate = Action { implicit request =>
     loginForm.bindFromRequest.fold(
       formWithErrors => BadRequest(html.login(formWithErrors)),
-      user => Redirect(routes.Blog.list).withSession("email" -> user._1)
+      user => Redirect(routes.Blog.admin).withSession("username" -> user._1)
     )
   }
 
