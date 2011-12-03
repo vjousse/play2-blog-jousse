@@ -7,7 +7,7 @@ import play.api.data._
 import views._
 import jousse.models._
 
-object Blog extends Controller {
+object Blog extends Controller with Secured {
 
   // -- Authentication
 
@@ -50,6 +50,13 @@ object Blog extends Controller {
     Action {
       implicit request =>
       Ok(views.html.blog())
+    }
+  }
+
+  def admin() = {
+    SecuredAction {
+      implicit request =>
+      Ok(views.html.blogAdmin())
     }
   }
 
