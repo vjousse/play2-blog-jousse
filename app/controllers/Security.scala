@@ -4,7 +4,7 @@ import play.api.mvc._
 /**
  * Provide security features
  */
-trait Secured extends ControllerLike {
+trait Secured {
 
   /**
    * Provide a default secured action
