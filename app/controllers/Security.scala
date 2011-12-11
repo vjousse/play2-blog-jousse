@@ -7,20 +7,24 @@ import play.api.mvc._
 trait Secured {
 
   /**
-   * Provide a default secured action
-   *
-   * @see Authenticated
+   * Retrieve the connected user email.
    */
-  def SecuredAction(block: Request[AnyContent] => Result): Action[AnyContent] = {
-    Security.Authenticated(
-      onUnauthorized = (
-        reqest => Results.Redirect(routes.Blog.login).withNewSession.flashing(
+  private def username(request: RequestHeader) = request.session.get("email")
+
+  /**
+   * Redirect to login if the user in not authorized.
+   */
+  private def onUnauthorized(request: RequestHeader) = Results.Redirect(routes.Blog.login).withNewSession.flashing(
           "error" -> "You have to be logged in to access this page"
         )
-      )
-    )(Action[AnyContent](play.api.mvc.BodyParsers.parse.anyContent)(block))
-  }
+  // --
 
+  /**
+   * Action for authenticated users.
+   */
+  def IsAuthenticated(f: => String => Request[AnyContent] => Result) = Security.Authenticated(username, onUnauthorized) { user =>
+    Action(request => f(user)(request))
+  }
 }
 
 

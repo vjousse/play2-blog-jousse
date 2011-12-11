@@ -53,11 +53,8 @@ object Blog extends Controller with Secured {
     }
   }
 
-  def admin() = {
-    SecuredAction {
-      implicit request =>
+  def admin() = IsAuthenticated { _ => implicit request =>
       Ok(views.html.blogAdmin())
-    }
   }
 
 }
