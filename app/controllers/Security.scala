@@ -9,7 +9,7 @@ trait Secured {
   /**
    * Retrieve the connected user email.
    */
-  private def username(request: RequestHeader) = request.session.get("email")
+  private def username(request: RequestHeader) = request.session.get("username")
 
   /**
    * Redirect to login if the user in not authorized.
