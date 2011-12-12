@@ -57,4 +57,8 @@ object Blog extends Controller with Secured {
       Ok(views.html.blogAdmin())
   }
 
+
+  def createPost() = IsAuthenticated { _ => implicit request =>
+      Ok(views.html.blogCreatePost())
+  }
 }
