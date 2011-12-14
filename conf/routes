@@ -7,11 +7,13 @@ GET     /                           controllers.Application.show(page = "index")
 
 # Blog pages
 GET     /blog                       controllers.Blog.list()
-GET     /blog/login                 controllers.Blog.login()
-GET     /blog/logout                controllers.Blog.logout()
 GET     /blog/admin                 controllers.Blog.admin()
 GET     /blog/post/create           controllers.Blog.createPost()
-POST    /blog/authenticate          controllers.Blog.authenticate()
+
+# Security stuff
+GET     /login                      controllers.Login.form()
+GET     /blog/logout                controllers.Login.logout()
+POST    /blog/authenticate          controllers.Login.authenticate()
 
 # Default pages
 GET     /:page                      controllers.Application.show(page)
