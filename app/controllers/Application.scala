@@ -15,7 +15,7 @@ object Application extends Controller {
           case "contact"  => contact()
           case "cv"       => cv()
           case "research" => research()
-          case "blog"     => blog()
+          case "blog"     => blog.list()
           case _          => error404()
         }
       )
