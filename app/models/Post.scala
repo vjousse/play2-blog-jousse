@@ -1,6 +1,7 @@
 package jousse
 package models
 
+import com.novus.salat.annotations._
 import com.mongodb.casbah.Imports._
 
-case class Post (_id: ObjectId = new ObjectId, title: String, content: String)
+case class Post (@Key("_id") title: String, content: String)

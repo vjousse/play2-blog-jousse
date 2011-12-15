@@ -10,5 +10,5 @@ import com.mongodb.casbah.Imports._
 
 import jousse.models._
 
-class PostRepo extends SalatDAO[Post, ObjectId](
+object PostDao extends SalatDAO[Post, ObjectId](
   collection = MongoConnection()("jousse_blog")("posts"))
