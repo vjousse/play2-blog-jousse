@@ -8,7 +8,8 @@ GET     /                           controllers.Application.show(page = "index")
 # Blog pages
 GET     /blog                       controllers.Blog.list()
 GET     /blog/admin                 controllers.Blog.admin()
-GET     /blog/post/create           controllers.Blog.createPost()
+GET     /blog/post/create           controllers.Blog.createPostForm()
+POST    /blog/post/create           controllers.Blog.createPost()
 
 # Security stuff
 GET     /login                      controllers.Login.form()
