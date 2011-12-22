@@ -14,15 +14,7 @@ object Login extends Controller  {
 
   // -- Authentication
 
-
-  val loginForm = Form(
-    of(
-      "username" -> text,
-      "password" -> text
-    ) verifying ("Invalid username or password", result => result match {
-      case (username, password) => User.authenticate(username, password).isDefined
-    })
-  )
+  val loginForm = new jousse.form.LoginForm form
 
   /**
    * Login page.
