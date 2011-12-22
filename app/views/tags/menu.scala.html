@@ -6,6 +6,6 @@
 
 <ul class="nav">
     @for((name,route) <- pages) {
-    <li id="@route"@current(routes.Application.show(route) toString)><a href="@routes.Application.show(route)">@name</a></li>
+    <li id="@route"@current(jousse.controllers.routes.Application.show(route) toString)><a href="@jousse.controllers.routes.Application.show(route)">@name</a></li>
     }
 </ul>

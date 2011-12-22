@@ -3,21 +3,21 @@
 # ~~~~
 
 # Home page
-GET     /                           controllers.Application.show(page = "index")
+GET     /                           jousse.controllers.Application.show(page = "index")
 
 # Blog pages
-GET     /blog                       controllers.Blog.list()
-GET     /blog/admin                 controllers.Blog.admin()
-GET     /blog/post/create           controllers.Blog.createPostForm()
-POST    /blog/post/create           controllers.Blog.createPost()
+GET     /blog                       jousse.controllers.Blog.list()
+GET     /blog/admin                 jousse.controllers.Blog.admin()
+GET     /blog/post/create           jousse.controllers.Blog.createPostForm()
+POST    /blog/post/create           jousse.controllers.Blog.createPost()
 
 # Security stuff
-GET     /login                      controllers.Login.form()
-GET     /blog/logout                controllers.Login.logout()
-POST    /blog/authenticate          controllers.Login.authenticate()
+GET     /login                      jousse.controllers.Login.form()
+GET     /blog/logout                jousse.controllers.Login.logout()
+POST    /blog/authenticate          jousse.controllers.Login.authenticate()
 
 # Default pages
-GET     /:page                      controllers.Application.show(page)
+GET     /:page                      jousse.controllers.Application.show(page)
 
 # Map static resources from the /public folder to the /assets URL path
 GET     /static/*file               controllers.Assets.at(path="/public", file)

@@ -1,4 +1,8 @@
+package jousse
 package controllers
+
+import play.api._
+import controllers._
 import play.api.mvc._
 import play.api.data._
 
@@ -33,7 +37,7 @@ object Login extends Controller  {
   def authenticate = Action { implicit request =>
     loginForm.bindFromRequest.fold(
       formWithErrors => BadRequest(html.login(formWithErrors)),
-      user => Redirect(routes.Blog.admin).withSession("username" -> user._1)
+      user => Redirect(jousse.controllers.routes.Blog.admin).withSession("username" -> user._1)
     )
   }
 
@@ -41,7 +45,7 @@ object Login extends Controller  {
    * Logout and clean the session.
    */
   def logout = Action {
-    Redirect(routes.Login.form).withNewSession.flashing(
+    Redirect(jousse.controllers.routes.Login.form).withNewSession.flashing(
       "success" -> "You've been logged out"
     )
   }
@@ -61,7 +65,7 @@ trait Secured {
   /**
    * Redirect to login if the user in not authorized.
    */
-  private def onUnauthorized(request: RequestHeader) = Results.Redirect(routes.Login.form).withNewSession.flashing(
+  private def onUnauthorized(request: RequestHeader) = Results.Redirect(jousse.controllers.routes.Login.form).withNewSession.flashing(
           "error" -> "You have to be logged in to access this page"
         )
   // --

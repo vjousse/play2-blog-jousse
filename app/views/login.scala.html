@@ -6,7 +6,7 @@
     <p>Use the below form to login to the blog admin.</p>
     <div class="thirty-margin-filler"></div>
     <fieldset>
-        @helper.form(routes.Login.authenticate) {
+        @helper.form(jousse.controllers.routes.Login.authenticate) {
 
             @form.globalError.map { error =>
                 <p class="error">

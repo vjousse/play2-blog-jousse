@@ -1,3 +1,4 @@
+package jousse
 package controllers
 
 import play.api._
