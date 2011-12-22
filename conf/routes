@@ -13,7 +13,7 @@ POST    /blog/post/create           jousse.controllers.Blog.createPost()
 
 # Security stuff
 GET     /login                      jousse.controllers.Login.form()
-GET     /blog/logout                jousse.controllers.Login.logout()
+GET     /logout                jousse.controllers.Login.logout()
 POST    /blog/authenticate          jousse.controllers.Login.authenticate()
 
 # Default pages
