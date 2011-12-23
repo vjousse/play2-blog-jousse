@@ -12,44 +12,14 @@
                         <th>Date</th>
                         <th>Title</th>
                         <th>Content</th>
-                        <th>Header 3</th>
-                        <th>Header 4</th>
                     </tr>
+                    @for(post <- posts) {
                     <tr>
-                        <td>Division 1</td>
-                        <td>Division 2</td>
-                        <td>Division 3</td>
-                        <td>Division 4</td>
-                        <td>Division 5</td>
+                        <td>@post.createdAtDate</td>
+                        <td>@post.title</td>
+                        <td>@post.content</td>
                     </tr>
-                    <tr class="even">
-                        <td>Division 1</td>
-                        <td>Division 2</td>
-                        <td>Division 3</td>
-                        <td>Division 4</td>
-                        <td>Division 5</td>
-                    </tr>
-                    <tr>
-                        <td>Division 1</td>
-                        <td>Division 2</td>
-                        <td>Division 3</td>
-                        <td>Division 4</td>
-                        <td>Division 5</td>
-                    </tr>
-                    <tr class="even">
-                        <td>Division 1</td>
-                        <td>Division 2</td>
-                        <td>Division 3</td>
-                        <td>Division 4</td>
-                        <td>Division 5</td>
-                    </tr>
-                    <tr>
-                        <td>Division 1</td>
-                        <td>Division 2</td>
-                        <td>Division 3</td>
-                        <td>Division 4</td>
-                        <td>Division 5</td>
-                    </tr>
+                    }
                 </tbody>
             </table>
         </div>
