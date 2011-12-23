@@ -19,7 +19,7 @@ object PostForm {
   )
 
   case class Data(title: String, content: String) {
-    def toPost = Post(title, content)
+    def toPost = Post(title, content, new ObjectId)
   }
 
   object Data {
