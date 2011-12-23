@@ -20,13 +20,17 @@ object Blog extends Controller with Secured {
 
   def list() = {
     Action {
-      implicit request =>
-      Ok(blog.list())
+      implicit request => {
+        val posts = PostDao.findAll
+        Ok(blog.list(posts))
+      }
     }
   }
 
-  def admin() = IsAuthenticated { _ => implicit request =>
-      Ok(blog.admin.index())
+  def admin() = IsAuthenticated { _ => implicit request => {
+      val posts = PostDao.findAll
+      Ok(blog.admin.index(posts))
+    }
   }
 
 

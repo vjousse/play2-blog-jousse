@@ -12,3 +12,9 @@ import jousse.models._
 
 object PostDao extends SalatDAO[Post, ObjectId](
   collection = MongoConnection()("jousse_blog")("posts"))
+{
+
+  def findAll = find(DBObject())
+    .sort(DBObject("createdAtDate" -> -1))
+    .toList
+}

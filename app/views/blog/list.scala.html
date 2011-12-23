@@ -1,4 +1,4 @@
-@()(implicit request: Request[AnyContent])
+@(posts: List[jousse.models.Post])(implicit request: Request[AnyContent])
 
 @sampleImage = { @routes.Assets.at("images/featured-image.png") }
 
