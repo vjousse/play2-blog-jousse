@@ -8,7 +8,7 @@ GET     /                           jousse.controllers.Application.show(page = "
 # Blog pages
 GET     /blog                       jousse.controllers.Blog.list()
 GET     /blog/admin                 jousse.controllers.Blog.admin()
-GET     /blog/post/create           jousse.controllers.Blog.createPostForm()
+GET     /blog/post/create           jousse.controllers.Blog.newPost()
 POST    /blog/post/create           jousse.controllers.Blog.createPost()
 
 # Security stuff

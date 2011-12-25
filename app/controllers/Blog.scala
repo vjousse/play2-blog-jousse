@@ -30,7 +30,7 @@ object Blog extends Controller with Secured {
   }
 
 
-  def createPostForm() = IsAuthenticated { _ => implicit request =>
+  def newPost() = IsAuthenticated { _ => implicit request =>
       Ok(blog.admin.createPost(postForm))
   }
 
