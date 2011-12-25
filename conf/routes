@@ -10,6 +10,7 @@ GET     /blog                       jousse.controllers.Blog.list()
 GET     /blog/admin                 jousse.controllers.Blog.admin()
 GET     /blog/post/create           jousse.controllers.Blog.newPost()
 POST    /blog/post/create           jousse.controllers.Blog.createPost()
+GET     /blog/post/edit/:id         jousse.controllers.Blog.editPost(id)
 
 # Security stuff
 GET     /login                      jousse.controllers.Login.form()

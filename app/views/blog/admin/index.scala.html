@@ -1,6 +1,6 @@
 @(posts: List[jousse.models.Post])(implicit request: Request[AnyContent])
 
-@import jousse.util.StringHelper._
+@import jousse.util.Templating._
 
 @main("Blog admin") {
         <div class="full-width">
@@ -16,7 +16,7 @@
                     </tr>
                     @for(post <- posts) {
                     <tr>
-                        <td>@formatDate(post.createdAtDate)</td>
+                        <td><a href="@jousse.controllers.routes.Blog.editPost(post._id toString)">@formatDate(post.createdAtDate)</a></td>
                         <td>@post.title</td>
                         <td>@post.content</td>
                     </tr>

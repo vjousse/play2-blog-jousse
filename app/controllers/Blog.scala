@@ -43,4 +43,12 @@ object Blog extends Controller with Secured {
       }
     )
   }
+
+  def editPost(id: String) = IsAuthenticated { _ => implicit request =>
+      PostDao.findOneByID(new ObjectId(id)) match {
+        case Some(post) => Ok(blog.admin.editPost(post))
+        case _          => Redirect(jousse.controllers.routes.Blog.list())
+      }
+  }
+
 }

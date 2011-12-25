@@ -1,0 +1,11 @@
+@(post: jousse.models.Post)(implicit request: Request[AnyContent])
+
+@import jousse.util.Templating._
+
+@main("Blog post") {
+        <div class="full-width">
+            <h1>Edit: @post.title</h1>
+            <div class="thirty-margin-filler"></div>
+        </div>
+}
+
