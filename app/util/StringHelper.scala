@@ -1,4 +1,4 @@
-package kcacup
+package jousse
 package util
 
 import com.twitter.util.Time
@@ -9,7 +9,7 @@ import java.text.SimpleDateFormat
 import java.util.Date
 import net.sf.jfuzzydate.{FuzzyDateFormat, FuzzyDateFormatter}
 
-object StringHelper extends StringHelper
+object StringHelper extends StringHelper with Conversions
 
 trait StringHelper {
 

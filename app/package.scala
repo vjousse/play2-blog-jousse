@@ -1,4 +1,7 @@
-package object jousse {
+import jousse.util.Conversions
+
+package object jousse
+  extends Conversions {
 
   /**
   * K combinator implementation

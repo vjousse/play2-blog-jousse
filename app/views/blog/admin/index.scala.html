@@ -1,5 +1,6 @@
 @(posts: List[jousse.models.Post])(implicit request: Request[AnyContent])
 
+@import jousse.util.StringHelper._
 
 @main("Blog admin") {
         <div class="full-width">
@@ -15,7 +16,7 @@
                     </tr>
                     @for(post <- posts) {
                     <tr>
-                        <td>@post.createdAtDate</td>
+                        <td>@formatDate(post.createdAtDate)</td>
                         <td>@post.title</td>
                         <td>@post.content</td>
                     </tr>
