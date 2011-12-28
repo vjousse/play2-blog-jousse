@@ -1,43 +1,22 @@
-@(form: Form[jousse.form.PostForm.Data])(implicit request: Request[AnyContent])
+@(postForm: Form[jousse.form.PostForm.Data])(implicit request: Request[AnyContent])
+
+@import helper._
 
 @main("Create post") {
 <div class="full-width">
     <h1>Create post</h1>
     <div class="thirty-margin-filler"></div>
     <a href="@jousse.controllers.routes.Blog.admin()">Admin home</a>
-    <form action="@jousse.controllers.routes.Blog.createPost()" method="POST">
+    @form(action = jousse.controllers.routes.Blog.createPost()) {
         <fieldset>
         <legend>Create post</legend>
         <div>
-        @form.forField("title") { field =>
-            <label for="@field.name">Title:</label><br />
-            <input id="@field.name" class="textfield" type="text" name="@field.name" value="@field.value"/><br />
-            @field.error.map { error =>
-                <p class="error">
-                @error
-                </p>
-            }
-        }
-        </div>
-
-        <div style="clear:both"></div>
-
-        @form.forField("content") { field =>
-        <div>
-        <label for="@field.name">Content</label>
-        <textarea id="@field.name" name="@field.name" class="textarea" cols="40" rows="10">@field.value</textarea><br />
-
-            @field.error.map { error =>
-                <p class="error">
-                @error
-                </p>
-            }
-        }
+            @baseForm(postForm)
         </div>
 
         <input class="small button" type="submit" value="Submit" />
         </p>
         </fieldset>
-    </form>
+    }
 </div>
 }
