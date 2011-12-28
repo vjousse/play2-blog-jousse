@@ -7,8 +7,9 @@ import play.api.data._
 import play.api.data.format.Formats._
 import play.api.data.validation.Constraints._
 
-import com.mongodb.casbah.Imports._
 import com.novus.salat._
+import com.novus.salat.global._
+import com.mongodb.casbah.Imports._
 
 import views.html._
 import jousse.models._
@@ -57,15 +58,17 @@ object Blog extends Controller with Secured {
       PostDao.findOneByID(new ObjectId(id)) match {
         case Some(post) => postForm.bindFromRequest.fold(
           form => Ok(blog.admin.editPost(post, form)),
-          data => saveAndRedirect(data toPost post)
+          data => updateAndRedirect(data toPost post)
         )
-        case _          => Redirect(jousse.controllers.routes.Blog.list())
+        case _ => Redirect(jousse.controllers.routes.Blog.list())
       }
   }
 
-  private def saveAndRedirect(post: Post) = {
-    //val postObject = grater[Post].asDBObject(post)
-    //PostDao.update(DBObject("_id" -> post._id), postObject)
+  private def updateAndRedirect(post: Post) = {
+
+    val postDBObject = grater[Post].asDBObject(post)
+    PostDao.update(DBObject("_id" -> post._id), postDBObject)
+
     Redirect(jousse.controllers.routes.Blog.editPost(post._id toString))
   }
 }
