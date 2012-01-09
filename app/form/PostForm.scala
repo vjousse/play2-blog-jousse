@@ -3,7 +3,7 @@ package form
 
 import play.api.data._
 import play.api.data.format.Formats._
-import validation.Constraints._
+import play.api.data.validation.Constraints._
 import com.mongodb.casbah.Imports._
 import java.util.Date
 
@@ -14,8 +14,8 @@ object PostForm {
 
   val form = Form(
     of(Data.apply _, Data.unapply _)(
-      "title"   -> of[String].verifying(required),
-      "content" -> of[String].verifying(required)
+      "title"   -> of[String].verifying(nonEmpty),
+      "content" -> of[String].verifying(nonEmpty)
     )
   )
 

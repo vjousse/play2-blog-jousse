@@ -24,7 +24,7 @@ object User {
       if adminPassword == hash
     } yield User(username, password)
 
-  private def conf(key: String) = Play.unsafeApplication.configuration get key map (_.value)
+  private def conf(key: String) = Play.unsafeApplication.configuration getString key
 
   private def md5AsString(s: String) = Error.unsafeOption {
 
