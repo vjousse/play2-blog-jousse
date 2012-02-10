@@ -2,6 +2,7 @@ package jousse
 package form
 
 import play.api.data._
+import play.api.data.Forms._
 import play.api.data.format.Formats._
 import play.api.data.validation.Constraints._
 import com.mongodb.casbah.Imports._
@@ -13,10 +14,10 @@ import jousse.models._
 object PostForm {
 
   val form = Form(
-    of(Data.apply _, Data.unapply _)(
+    mapping(
       "title"   -> of[String].verifying(nonEmpty),
       "content" -> of[String].verifying(nonEmpty)
-    )
+    )(Data.apply)(Data.unapply)
   )
 
   case class Data(title: String, content: String) {
