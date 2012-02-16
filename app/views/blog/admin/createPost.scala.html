@@ -7,7 +7,7 @@
     <h1>Create post</h1>
     <div class="thirty-margin-filler"></div>
     <a href="@jousse.controllers.routes.Blog.admin()">Admin home</a>
-    @form(action = jousse.controllers.routes.Blog.createPost()) {
+    @form(action = jousse.controllers.routes.Blog.createPost(), 'enctype -> "multipart/form-data") {
         <fieldset>
         <legend>Create post</legend>
         <div>

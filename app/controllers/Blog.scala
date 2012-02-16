@@ -1,6 +1,8 @@
 package jousse
 package controllers
 
+import java.io.File;
+
 import play.api._
 import play.api.mvc._
 import play.api.data._
@@ -37,13 +39,22 @@ object Blog extends Controller with Secured {
   }
 
   def createPost() = IsAuthenticated { _ => implicit request =>
-    postForm.bindFromRequest.fold(
-      formWithErrors => BadRequest(blog.admin.createPost(formWithErrors)),
-      postData => Ok {
-        PostDao insert postData.toPost
-        blog.admin.createPost(postForm)
+    {
+      //Upload file in any
+      request.body.asMultipartFormData.map { formData =>
+        formData.file("picture") map { picture =>
+          picture.ref.moveTo(new File("/tmp/"+picture.filename))
+        }
       }
-    )
+
+      postForm.bindFromRequest.fold(
+        formWithErrors => BadRequest(blog.admin.createPost(formWithErrors)),
+        postData => Ok {
+          PostDao insert postData.toPost
+          blog.admin.createPost(postForm)
+        }
+      )
+    }
   }
 
   def editPost(id: String) = IsAuthenticated { _ => implicit request =>
