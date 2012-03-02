@@ -10,9 +10,8 @@ object ApplicationBuild extends Build {
     val appDependencies = Seq(
       // Add your project dependencies here,
     )
-
-    val main = PlayProject(appName, appVersion, appDependencies).settings(defaultScalaSettings:_*).settings(
-      // Add your own project settings here      
+    val main = PlayProject(appName, appVersion, appDependencies, mainLang = SCALA).settings(
+      // Add your own project settings here
     )
 
 }
