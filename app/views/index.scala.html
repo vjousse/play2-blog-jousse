@@ -1,16 +1,7 @@
 @()(implicit request: Request[AnyContent])
 
 
-@slogan = {
-<div class="green-horizontal-rule"></div>
-<!-- Slogan Start -->
-<div id="slogan">
-    <span class="slogan-large">L'</span>avenir n'est jamais que du <span class="green">présent</span> à mettre en ordre. Tu n'as pas à le prévoir, mais à le <span class="green">permettre</span> -- Antoine de Saint Exupéry</div>
-<!-- Slogan End -->
-<div class="green-horizontal-rule"></div>
-}
-
-@main("Accueil", slogan) {
+@main("Accueil") {
     <div class="full-width">
         <div class="one-third">
             <h1>Pourquoi ?</h1>
