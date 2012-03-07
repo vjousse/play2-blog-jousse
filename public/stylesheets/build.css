@@ -4,15 +4,15 @@
 	Version: 1.0
 	Author: Kieran Eves (Evaske) - http://www.evaske.com
 	*/
-	
+
 	/* ------ TABLE OF CONTENTS ------
-	
+
 	01. GENERAL TYPOGRAPHY
 	                1. CSS Reset
 	                2. General
 	                3. List Styles
 	                4. Headers
-					
+
 	02. GENERAL STYLES
 	                1. Structure
 	                2. Header
@@ -20,16 +20,16 @@
 	                4. Columns
 	                5. Font Classes
 	                6. Miscellaneous
-					
+
 	03. NAVIGATION
 	                1. Top Navigation
-					
+
 	04. PAGE SPECIFIC STYLES
 	                1. Index Page
 	                2. Portfolio Page
 	                3. 404 Page
 	                4. Blog Page
-	
+
 	05. MISCELLANEOUS
 	                1. Dropcaps
 	                2. Pullquotes
@@ -43,16 +43,16 @@
 	                10. Forms
 	                11. PrettyPhoto
 	                12. Widgets
-					
+
 	-------------------------------- */
-	
-	
+
+
 	/* _____________________________________________________________________________________________________________________________________ */
 	/*                                                        01. General Typography                                                         */
 	/* _____________________________________________________________________________________________________________________________________ */
-	
+
 	/* ------ 1. CSS Reset ------ */
-	
+
 	html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,
 	blockquote,pre,address,code,del,dfn,em,img,q,
 	dl,dt,dd,ol,ul,li,
@@ -64,63 +64,63 @@
 	em, dfn, i{font-style:italic;}
 
 	/* ------ 2. General ------ */
-	
-	body{background:url(../images/background.png) repeat;height:100%;height:auto;font-size:12px;color:#777;font-family:'Droid Sans';}
+
+	body{background:url(../images/background.png) repeat;height:100%;height:auto;font-size:13px;color:#777;font-family:'Droid Sans';}
 	h1,h2,h3,h4,h5,h6{letter-spacing:1px;}
 	a:link,a:visited,a:hover,a:active,a:focus{text-decoration:none;outline:none;}
 	a{color:#444;}
-	a:hover{color:#777;}	
+	a:hover{color:#777;}
 	pre,code{white-space:pre;clear:both;float:none;}
 	code{background:#FFF;display:inline;border:1px solid #CCC;padding:2px;}
 	pre > code{background:#FFF;display:block;border:1px solid #CCC;padding:5px;font-size:12px;}
 	pre{background:#F5F5F5;display:block;border:1px solid #CCC;padding:5px;font-size:12px;}
-	
+
 	/* ------ 3. List Styles ------ */
-	
+
 	ul,li{list-style:none;list-style-type:none;}
 	ul.arrow_list,ul.arrow_list li,ul.check_list,ul.check_list li{margin-left:0;list-style:none;}
 	ol{float:left;}
 
 	ul.list-circle li{list-style:circle;margin-left: 14px;}
 	ul.list-circle li.download{list-style:none;text-align:right;font-weight:bold;border-bottom:1px dotted #CCC;margin-bottom:10px;}
-		
+
 	/* ------ 4. Headers ------ */
-	
+
 	h1,h2,h3,h4,h5,h6{width:100%;font-weight:normal;color:#444;line-height:100%;clear:both;}
-	h1{font-size:24px;}	
+	h1{font-size:24px;}
 	h2{font-size:22px;}
 	h3{font-size:18px;}
-	h4{font-size:16px;font-weight:bold;text-transform:uppercase;}	
-	h5{font-size:14px;font-weight:bold;text-transform:uppercase;margin:0px 0 10px 0px;}		
+	h4{font-size:16px;font-weight:bold;text-transform:uppercase;}
+	h5{font-size:14px;font-weight:bold;text-transform:uppercase;margin:0px 0 10px 0px;}
 	h6{font-size:14px;font-weight:bold;margin:20px 0 10px 0px;}
-	
+
 	/* _____________________________________________________________________________________________________________________________________ */
 	/*                                                          02. General Styles                                                           */
 	/* _____________________________________________________________________________________________________________________________________ */
-		
+
 	/* ------ 1. Structure ------ */
-	
+
 	#page-wrapper{background:#EEE url(../images/background.png) repeat;width:940px;height:100%;height:auto;margin: 0 auto;}
-	
+
 	/* ------ 2. Header ------ */
 
 	#logo{margin:40px 0 0 0;float:left;}
 	.default-logo a{background:transparent url(../images/vincent-jousse.png) no-repeat;width:185px;height:30px;float:left;}
 	.default-logo a:hover{background:url(../images/vincent-jousse-hover.png) no-repeat;float:left;}
-	
+
 	/* ------ 3. Footer ------ */
-	
+
 	#footer-wrapper{position:relative;width:940px;height:101px;float:left;}
-	#footer-wrapper ul{margin-top:40px;float:left;}	
-		#footer-wrapper ul li{margin-right:50px;float: left;}	
-	#footer-logo{background:url(../images/vincent-jousse.png) no-repeat;width:185px;height:30px;margin-top:30px;float:right;}	
-	#footer-copyright{position:absolute;top:53px;right:0px;float:right;}	
-	#footer-wrapper ul li a{text-decoration:none;color:#777;}		
+	#footer-wrapper ul{margin-top:40px;float:left;}
+		#footer-wrapper ul li{margin-right:50px;float: left;}
+	#footer-logo{background:url(../images/vincent-jousse.png) no-repeat;width:185px;height:30px;margin-top:30px;float:right;}
+	#footer-copyright{position:absolute;top:53px;right:0px;float:right;}
+	#footer-wrapper ul li a{text-decoration:none;color:#777;}
 		#footer-wrapper ul li a:hover{color:#444;}
 		#footer-wrapper li.current a{color:#000;}
-	
+
 	/* ------ 4. Columns ------ */
-	
+
 	.one-fourth{width:220px;}
 	.one-third{width:300px;}
 	.one-half{width:460px;}
@@ -138,10 +138,10 @@
 		height:100%;
 		margin:30px 0 30px 0;
 		float:left;}
-	
-	.three-fourth .one-fourth{margin-bottom:0px;}	
+
+	.three-fourth .one-fourth{margin-bottom:0px;}
 	.wrapper{margin-top:0px;float:left;}
-	
+
 	.horizontal-rule{
 		border-bottom:1px dotted #CCC;
 		width:auto;
@@ -158,7 +158,7 @@
 		font-size:0;
 		margin-top:30px;
 		float:left;}
-	
+
 	.one-fourth .horizontal-rule{margin-top:10px;}
 	.one-fourth-last .horizontal-rule{margin-top:10px;}
 	.one-third .horizontal-rule{margin-top:10px;}
@@ -170,9 +170,9 @@
 	.three-fourth .horizontal-rule{margin-top:10px;}
 	.three-fourth-last .horizontal-rule{margin-top:10px;}
 	.full-width .horizontal-rule{margin-top:10px;}
-	
+
 	/* ------ 5. Font Classes ------ */
-	
+
 	.bold{font-weight:bold;}
 	.italic{font-style:italic;}
 	.black{color:#777;}
@@ -186,21 +186,21 @@
 	.portfolio-date{color:#AAA;font-size:10px;text-transform:uppercase;margin-top:5px;float:left;}
 	.font-styles{font-size:14px;float:left;display:inline;list-style:none;}
 	.font-styles li{float:left;margin-right:20px;margin-bottom:10px;}
-	
+
 	/* ------ 6. Miscellaneous ------ */
-	
+
 	#content-banner{width:940px;height:100px;margin-top:30px;float:left;}
 	.margin-filler{width:100%;height:20px;float:left;}
 	.thirty-margin-filler{width:100%;height:30px;float:left;}
 	.more-float{margin-top:10px;float:right;display:inline;clear:both;}
-	
+
 	/* _____________________________________________________________________________________________________________________________________ */
 	/*                                                            03. Navigation                                                             */
 	/* _____________________________________________________________________________________________________________________________________ */
-	
+
 	/* ------ 1. Top Navigation ------ */
-	
-	#nav-wrapper{width:700px;height:14px;font-size:14px;margin-top:48px;float:right;}	
+
+	#nav-wrapper{width:700px;height:14px;font-size:14px;margin-top:48px;float:right;}
 	#nav-wrapper .nav{height:14px;display:block;margin:0;padding:0;position:relative;float:right;}
 		#nav-wrapper .nav a{display:block;color:#777;margin-left:50px;line-height:1;}
 			#nav-wrapper .nav *:hover{color:#000}
@@ -214,17 +214,17 @@
 			#nav-wrapper .nav ul li {float:none;}
 				#nav-wrapper .nav ul li a{background-color:#FFF;padding:10px;font-size:12px;color:#444;border-top:1px dotted #CCC;}
 		#nav-wrapper .nav ul ul { top: 0; }
-	
+
 	/* _____________________________________________________________________________________________________________________________________ */
 	/*                                                       04. Page Specific Styles                                                        */
 	/* _____________________________________________________________________________________________________________________________________ */
 
 	/* ------ 1. Index Page ------ */
-	
+
 	/* Slogan */
-	#slogan{width:100%;text-align:center;font-size:24px;margin-top:30px;color:#777;float:left;}	
+	#slogan{width:100%;text-align:center;font-size:24px;margin-top:30px;color:#777;float:left;}
 	.slogan-large{font-size:36px;}
-		
+
 	/* Slider */
 	#slides{
 		position:relative;
@@ -240,12 +240,12 @@
   		.slides_container div{width:918px;height:300px;display:block;}
   	.next,.prev{background:url(../images/slides-next.png);position:absolute;float:left;top:-1px;left:-27px;width:24px;height:322px;z-index:101;}
 	.next{background: url(../images/slides-prev.png);left:941px;}
-	
+
 	#3d-slider{margin:0px 0 0 0;float:left;background:#FFF;border:1px solid #CCC;padding:10px;}
-	#slider{width:940px;height:300px;margin-top:30px;overflow:hidden;float:left;}	
+	#slider{width:940px;height:300px;margin-top:30px;overflow:hidden;float:left;}
 	div.orbit{width:1px;height:1px;position:relative;overflow:hidden;}
-		div.orbit img{position:absolute;top:0;left:0;} 
-	.orbit-bullets{position:absolute;right:10px;bottom:10px;z-index:1000;}	 
+		div.orbit img{position:absolute;top:0;left:0;}
+	.orbit-bullets{position:absolute;right:10px;bottom:10px;z-index:1000;}
 		.orbit-bullets li{
 			background:url(../images/slider-bullets.png) no-repeat;
 			width:14px;
@@ -254,23 +254,23 @@
 			cursor:pointer;
 			text-indent:-9999px;
 			float:left;}
-			.orbit-bullets li.active{background-position: -14px 0;}	
+			.orbit-bullets li.active{background-position: -14px 0;}
 	#slider-shadow{background:url(../images/slider-shadow.png) no-repeat;width:940px;height:3px;margin-bottom:30px;font-size:0;float:left;}
-	
+
 	/* Feautured Work */
 	#featured-wrapper{width:700px;height:auto;height:100%;margin:30px 20px 0px 0;float:left;}
 	.featured-image{background-color:#FFF;width:208px;height:130px;border:1px solid #DDD;padding:5px;float:left;}
 	a.featured-link{text-decoration:underline;color:#A7CE44;float:right;}
 		a.featured-link:hover{color:#444;}
-	
+
 	/* Twitter Updates */
 	#twitter-feed{width:199px;border-left:1px solid #DDD;margin:30px 0px 30px 0;padding:0 0 0px 20px;float:left;}
-	
-	/* Testimonials */		
+
+	/* Testimonials */
 	#testimonials-wrapper{width:540px;height:100%;margin:30px 0 30px 87px;float:left;}
-	#testimonials-header{background:url(../images/testimonials-header.png) no-repeat;width:540px;height:7px;font-size:0px;float:left;}		
+	#testimonials-header{background:url(../images/testimonials-header.png) no-repeat;width:540px;height:7px;font-size:0px;float:left;}
 	#testimonials-body{background:url(../images/testimonials-background.png) repeat-y;position:relative;width:540px;height:100%;float:left;}
-	#testimonials-footer{background:url(../images/testimonials-footer.png) no-repeat;width:540px;height:7px;font-size:0px;float:left;}		
+	#testimonials-footer{background:url(../images/testimonials-footer.png) no-repeat;width:540px;height:7px;font-size:0px;float:left;}
 	#testimonials-speech-top{background:url(../images/testimonials-speech-top.png) no-repeat;width:36px;height:28px;float:left;}
 	#testimonials-speech-bottom{
 		background:url(../images/testimonials-speech-bottom.png) no-repeat;
@@ -281,31 +281,31 @@
 		height:28px;
 		float: left;}
 	#testimonial{padding:10px;width:448px;height:100%;float:left;}
-	
+
 	/* ------ 2. Portfolio Pages ------ */
-	
+
 	.one-column-picture{background-color:#FFF;width:610px;height:260px;border:1px solid #DDD;padding:5px;float:left;}
-	.two-column-picture{background-color:#FFF;width:450px;height:160px;border:1px solid #DDD;padding:5px;float:left;}	
+	.two-column-picture{background-color:#FFF;width:450px;height:160px;border:1px solid #DDD;padding:5px;float:left;}
 	.three-column-picture{background-color:#FFF;width:290px;height:160px;border:1px solid #DDD;padding:5px;float:left;}
 	.four-column-picture{background-color:#FFF;width:210px;height:140px;border:1px solid #DDD;padding:5px;margin-right:20px;float:left;}
 	.gallery-picture{background-color:#FFF;width:210px;height:140px;border:1px solid #DDD;padding:5px;margin:17px 17px 0 0px;float:left;}
 	.gallery-picture-last{background-color:#FFF;width:210px;height:140px;border:1px solid #DDD;padding:5px;margin:17px 0px 0 0;float:left;}
-	
+
 	/* ------ 3. 404 Page ------ */
-	
+
 	#fourofour{width:100%;text-align:center;font-size:150px;margin-top:18px;color:#777;float:left;}
 	#fourofour-message{width:100%;text-align:center;font-size:24px;margin-top:18px;margin-bottom:18px;color:#777;float:left;}
-	
-	/* ------ 4. Blog Page ------*/	
-	
+
+	/* ------ 4. Blog Page ------*/
+
 	.blog-data{font-size:10px;color:#AAA;font-style:italic;text-transform:uppercase;float:left;}
 	.blog-author{background:#F5F5F5;border:1px solid #CCC;padding:10px;float:left;}
 	.post h2 { padding-top: 30px; }
-	
+
 	/* _____________________________________________________________________________________________________________________________________ */
 	/*                                                           05. Miscellaneous                                                           */
 	/* _____________________________________________________________________________________________________________________________________ */
-	
+
 	/* ------- 1. Dropcaps ------- */
 
 	.dropcap1{color:#444;font-weight:900;display:block;float:left;font-size:30px;line-height:40px;margin:0 5px 0 0;}
@@ -324,7 +324,7 @@
 		padding:10px;
 		width:33%;}
 	.pullquote-left{float:left;margin-left:0px;margin-right:20px;}
-	
+
 	/* ------- 3. Paragraph Images ------- */
 
 	.image-alignright,.image-alignleft{
@@ -340,9 +340,9 @@
 		float:left;
 		padding:5px;
 		margin-bottom:10px;}
-	
+
 	/* ------- 4. List Styles ------ */
-	
+
 	/* Black Icons */
 	ul.black-star,ul.black-pencil,ul.black-buddy,ul.black-plus,ul.black-minus,ul.black-bulb,ul.black-cart,ul.black-tick{float:left;clear:both;}
 	ul.black-star li{background:transparent url(../images/black-icons.png) no-repeat scroll 0px 4px;padding-left:20px;}
@@ -353,7 +353,7 @@
 	ul.black-bulb li{background:transparent url(../images/black-icons.png) no-repeat scroll 0px -85px;padding-left:20px;}
 	ul.black-cart li{background:transparent url(../images/black-icons.png) no-repeat scroll 0px -103px;padding-left:20px;}
 	ul.black-tick li{background:transparent url(../images/black-icons.png) no-repeat scroll 0px -121px;padding-left:20px;}
-	
+
 	/* Green Icons */
 	ul.green-star,ul.green-pencil,ul.green-buddy,ul.green-plus,ul.green-minus,ul.green-bulb,ul.green-cart,ul.green-tick{float:left;clear:both;}
 	ul.green-star li{background:transparent url(../images/green-icons.png) no-repeat scroll 0px 4px;padding-left:20px;}
@@ -364,7 +364,7 @@
 	ul.green-bulb li{background:transparent url(../images/green-icons.png) no-repeat scroll 0px -85px;padding-left:20px;}
 	ul.green-cart li{background:transparent url(../images/green-icons.png) no-repeat scroll 0px -103px;padding-left:20px;}
 	ul.green-tick li{background:transparent url(../images/green-icons.png) no-repeat scroll 0px -121px;padding-left:20px;}
-	
+
 	/* Yellow Icons */
 	ul.yellow-star,ul.yellow-pencil,ul.yellow-buddy,ul.yellow-plus,ul.yellow-minus,ul.yellow-bulb,ul.yellow-cart,ul.yellow-tick{float:left;clear:both;}
 	ul.yellow-star li{background:transparent url(../images/yellow-icons.png) no-repeat scroll 0px 4px;padding-left:20px;}
@@ -375,7 +375,7 @@
 	ul.yellow-bulb li{background:transparent url(../images/yellow-icons.png) no-repeat scroll 0px -85px;padding-left:20px;}
 	ul.yellow-cart li{background:transparent url(../images/yellow-icons.png) no-repeat scroll 0px -103px;padding-left:20px;}
 	ul.yellow-tick li{background:transparent url(../images/yellow-icons.png) no-repeat scroll 0px -121px;padding-left:20px;}
-	
+
 	/* Red Icons */
 	ul.red-star,ul.red-pencil,ul.red-buddy,ul.red-plus,ul.red-minus,ul.red-bulb,ul.red-cart,ul.red-tick{float:left;clear:both;}
 	ul.red-star li{background:transparent url(../images/red-icons.png) no-repeat scroll 0px 4px;padding-left:20px;}
@@ -386,7 +386,7 @@
 	ul.red-bulb li{background:transparent url(../images/red-icons.png) no-repeat scroll 0px -85px;padding-left:20px;}
 	ul.red-cart li{background:transparent url(../images/red-icons.png) no-repeat scroll 0px -103px;padding-left:20px;}
 	ul.red-tick li{background:transparent url(../images/red-icons.png) no-repeat scroll 0px -121px;padding-left:20px;}
-	
+
 	/* Blue Icons */
 	ul.blue-star,ul.blue-pencil,ul.blue-buddy,ul.blue-plus,ul.blue-minus,ul.blue-bulb,ul.blue-cart,ul.blue-tick{float:left;clear:both;}
 	ul.blue-star li{background:transparent url(../images/blue-icons.png) no-repeat scroll 0px 4px;padding-left:20px;}
@@ -397,7 +397,7 @@
 	ul.blue-bulb li{background:transparent url(../images/blue-icons.png) no-repeat scroll 0px -85px;padding-left:20px;}
 	ul.blue-cart li{background:transparent url(../images/blue-icons.png) no-repeat scroll 0px -103px;padding-left:20px;}
 	ul.blue-tick li{background:transparent url(../images/blue-icons.png) no-repeat scroll 0px -121px;padding-left:20px;}
-	
+
 	/* Magenta Icons */
 	ul.magenta-star,ul.magenta-pencil,ul.magenta-buddy,ul.magenta-plus,ul.magenta-minus,ul.magenta-bulb,ul.magenta-cart,ul.magenta-tick{float:left;clear:both;}
 	ul.magenta-star li{background:transparent url(../images/magenta-icons.png) no-repeat scroll 0px 4px;padding-left:20px;}
@@ -408,7 +408,7 @@
 	ul.magenta-bulb li{background:transparent url(../images/magenta-icons.png) no-repeat scroll 0px -85px;padding-left:20px;}
 	ul.magenta-cart li{background:transparent url(../images/magenta-icons.png) no-repeat scroll 0px -103px;padding-left:20px;}
 	ul.magenta-tick li{background:transparent url(../images/magenta-icons.png) no-repeat scroll 0px -121px;padding-left:20px;}
-	
+
 	/* Orange Icons */
 	ul.orange-star,ul.orange-pencil,ul.orange-buddy,ul.orange-plus,ul.orange-minus,ul.orange-bulb,ul.orange-cart,ul.orange-tick{float:left;clear:both;}
 	ul.orange-star li{background:transparent url(../images/orange-icons.png) no-repeat scroll 0px 4px;padding-left:20px;}
@@ -419,7 +419,7 @@
 	ul.orange-bulb li{background:transparent url(../images/orange-icons.png) no-repeat scroll 0px -85px;padding-left:20px;}
 	ul.orange-cart li{background:transparent url(../images/orange-icons.png) no-repeat scroll 0px -103px;padding-left:20px;}
 	ul.orange-tick li{background:transparent url(../images/orange-icons.png) no-repeat scroll 0px -121px;padding-left:20px;}
-	
+
 	ol.plain-list, ol.bold-list, ol.bold-number-list, ol.green-bold-number-list{margin:0px 0 0 5px;counter-reset:item;clear:both;}
 	ol.plain-list li:before, ol.bold-list li:before, ol.bold-number-list li:before, ol.green-bold-number-list li:before{
 		content:counter(item) ". ";
@@ -428,28 +428,28 @@
 	ol.bold-number-list li:before{font-weight:bold;}
 	ol.green-bold-number-list li:before{font-weight:bold;color:#A7CE44;}
 	ol.bold-list{font-weight:bold;}
-	
+
 	/* ------ 5. Highlighting ------ */
-	
+
 	.yellow-highlight, .black-highlight{height:100%;padding:3px;}
 	.yellow-highlight{background:yellow;}
 	.black-highlight{background:#444;color:#EEE;}
-	
+
 	/* ------ 6. Coloured Boxes ------ */
-	
+
 	.green-box,.red-box,.yellow-box,.blue-box{width:auto;padding:20px;text-align:center;clear:both;}
 	.green-box{background:#DBF59A;border:1px solid #A7CE44;color:#78952D;}
 	.red-box{background:#F59A9A;border:1px solid #CE4444;color:#A33636;}
 	.yellow-box{background:#EAE17C;border:1px solid #CABF42;color:#A29826;}
 	.blue-box{background:#9FCFF7;border:1px solid #59A0DC;color:#377AB3;}
-	
+
 	/* ------ 7. Coloured Buttons ----- */
 	.button{
 		background:#222 url(../images/alert-overlay.png) repeat-x;
-		padding:5px 10px 6px 10px; 
-		color:#FFF; 
+		padding:5px 10px 6px 10px;
+		color:#FFF;
 		text-decoration:none;
-		-moz-border-radius:5px; 
+		-moz-border-radius:5px;
 		-webkit-border-radius:5px;
 		-moz-box-shadow:0 1px 3px rgba(0,0,0,0.5);
 		-webkit-box-shadow:0 1px 3px rgba(0,0,0,0.5);
@@ -463,8 +463,8 @@
     .button a{
         color:#FFF;
     }
-	
-	/* Sizes */	
+
+	/* Sizes */
 	.small.button,.small.button:visited{font-size:10px;}
 	.button,.button:visited,.medium.button,.medium.button:visited{
 		font-size:13px;
@@ -472,7 +472,7 @@
 		line-height:1;
 		text-shadow:0 -1px 1px rgba(0,0,0,0.25);}
 	.large.button,.large.button:visited{font-size:14px;padding:8px 14px 9px;}
-	
+
 	/* Colours */
 	.button:hover{background-color:#111;color:#fff;}
 	.button:active{top:1px;}
@@ -488,13 +488,13 @@
 	.orange.button:hover{background-color:#d45500;}
 	.yellow.button,.yellow.button:visited{background-color:#CABF42;}
 	.yellow.button:hover{background-color:#A29826;}
-	
+
 	/* Button Previews */
 	.button-styles{margin-right:20px;float:left;}
 	.button-styles li{margin-top:10px;}
-	
+
 	/* ------ 8. Coloured Blocks ------ */
-	
+
 	.black-block{border-left:5px solid #444;padding-left:20px;}
 	.green-block{border-left:5px solid #A7CE44;padding-left:20px;}
 	.blue-block{border-left:5px solid #59A0DC;padding-left:20px;}
@@ -502,7 +502,7 @@
 	.yellow-block{border-left:5px solid #CABF42;padding-left:20px;}
 	.magenta-block{border-left:5px solid #A9014B;padding-left:20px;}
 	.orange-block{border-left:5px solid #FF5C00;padding-left:20px;}
-					
+
 	/* ------ 9. Tables ------ */
 
 	table{border-collapse:separate;border-spacing:0;width:100%;border-bottom:3px solid #CCC;margin-bottom:18px;}
@@ -510,7 +510,7 @@
 	th{padding:10px;color:#444;border-top:3px solid #fff;border-bottom:3px solid #EEE;}
 	td{padding:10px;color:#777;text-align:center;}
 	th,tr:hover{background-color:#F5F5F5;}
-	
+
 	/* ------ 10. Forms ------ */
 
 	form{width:100%;float:left;}
@@ -524,14 +524,14 @@
 	input.button{width:auto;border:0;float:left;}
 	.error{margin-left:10px;color: red;}
 
-	/* ------ 11. PrettyPhoto ------ */ 
-	
+	/* ------ 11. PrettyPhoto ------ */
+
 	#overlay{position:absolute;top:0;left:0;z-index:90;width:100%;height:500px;background-color:#000;}
 	.pp_overlay{background:#AAA;display:none;left:0;position:absolute;top:0;width:100%;z-index:9500;}
 	.pp_close{cursor:pointer;}
 		a.pp_close{color:#777;display:block;float:right;line-height:22px;}
 			a.pp_close:hover{color:#444;}
-	a.pp_next{background:url(../images/btnNext.png) center right  no-repeat;display:block;float:right;height:100%;text-indent:-10000px;width:49%;}	
+	a.pp_next{background:url(../images/btnNext.png) center right  no-repeat;display:block;float:right;height:100%;text-indent:-10000px;width:49%;}
 		.pp_next:hover{background:url(../images/btnNext.png) center right  no-repeat;cursor:pointer;}
 	a.pp_previous{background:url(../images/btnPrevious.png) center left no-repeat;display:block;float:left;height:100%;text-indent:-10000px;width:49%;}
 		.pp_previous:hover{background:url(../images/btnPrevious.png) center left no-repeat;cursor:pointer;}
@@ -551,9 +551,9 @@
 	.pp_details{float:left;margin:0;}
 	.pp_description{font-size:10px;font-weight:bold;text-transform:uppercase;color:#444;display:none;margin:0;}
 	.pp_hoverContainer{position:absolute;top:0;width:100%;z-index:2000;}
-	
+
 	/* ------ 12. Widgets ------ */
-	
+
 	.widget-list{width:100%;margin-top:10px;float:left;}
 	.widget-list li{cursor:pointer;border-bottom:1px dashed #DDD;margin-top:10px;}
 	.widget-hint {
@@ -568,12 +568,12 @@
 		color:#A7CE44;}
 	ul.widget-list.posts li{background:transparent url(../images/widget-post.png) no-repeat scroll 0px 4px;padding-left:20px;}
 	ul.widget-list.comments li{background:transparent url(../images/black-icons.png) no-repeat scroll 0px -35px;padding-left:20px;}
-	 
+
 	/* 1. Twitter Widget */
 	ul.widget-list.twitter li{background:transparent url(../images/widget-twitter.png) no-repeat scroll 0px 4px;padding-left:20px;}
 	#twitter{float:left;display:inline;}
 	.widget-twitter-time{font-size:10px;}
-	 
+
 	/* 2. Tag Cloud Widget */
 	ul.widget-list.cloud {padding-bottom:10px;border-bottom:1px dashed #DDD;}
 	ul.widget-list.cloud li{
@@ -591,7 +591,7 @@
 		behavior: url(../files/border-radius.htc);}
 	a.cloud{color:#777;}
 	a.cloud:hover{color:#A7CE44;}
-	
+
 	/* 3. Search Widget */
 	ul.widget-list.search {padding-bottom:10px;border-bottom:1px dashed #DDD;}
 	ul.widget-list.search li{margin-right:20px;border-bottom:none;float:left;}
@@ -599,11 +599,11 @@
 		width:auto;
 		border:0px;
 		background:#222 url(../images/alert-overlay.png) repeat-x;
-		padding:5px 10px 6px 10px; 
+		padding:5px 10px 6px 10px;
 		font-size:10px;
-		color:#FFF; 
+		color:#FFF;
 		text-decoration:none;
-		-moz-border-radius:5px; 
+		-moz-border-radius:5px;
 		-webkit-border-radius:5px;
 		-moz-box-shadow:0 1px 3px rgba(0,0,0,0.5);
 		-webkit-box-shadow:0 1px 3px rgba(0,0,0,0.5);
@@ -616,7 +616,7 @@
 		line-height:1;
 		display:inline;}
 	.search-button:hover{background-color:#111;color:#fff;}
-	 
+
 	/* 4. Navigation Widget */
 	ul.widget-list.navigation .selected a{padding-left:10px;color:#A7CE44;}
 	ul.widget-list.navigation .selected a:hover{color:#777;}
