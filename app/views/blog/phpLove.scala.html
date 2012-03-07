@@ -1,0 +1,56 @@
+@()(implicit request: Request[AnyContent])
+
+@main("Blog") {
+
+<!-- Content Start -->
+<div class="full-width">
+    <h1><a href="@jousse.controllers.routes.Blog.phpLove()">PHP: You love it or you leave it</a></h1>
+    <div class="horizontal-rule"></div>
+    <div class="blog-data">Posted <span class="black">07 March 2012</span> by <span class="black">Vincent Jousse</span> - <span class="black">18</span> Comments</div>
+</div>
+<div class="full-width">
+    <h2>PHP is great to start with</h2>
+    <p>
+    <span class="dropcap1">I</span> do love PHP. Well, to be more precise, I used to love PHP a lot, and I still respect it and people using/improving it. You can do whatever you want with PHP, from the very quick and dirty way, to the bloated framework way (oh c'mon). But it's maybe the <strong>right time to move on</strong>.</p>
+    <p>I think this is why people of my generation love PHP, <strong>they grew with it like I did</strong>. They have learnt Java at school while they were doing PHP and fun stuff at home in the meantime. And to be honest, between Struts/Spring/Hibernate/PutWhateverJavaFrameworkWorksForYouHere and <span class="black-highlight">echo $_GET['myXssAttack'];</span>, the later was a lot more lovely.</p>
+</div>
+
+<div class="full-width">
+    <h2>Then you've learnt with it, the easy way</h2>
+
+    <p><span class="dropcap1">S</span>ome time ago, sessions were implemented in PHP. I can remember when I was still using PHP 3 that it was a big change. We even had classes! Well, some stuff to aggregate other stuff inside the same class name to be precise. But it was great.</p>
+    <p>Then we started to have <strong>design patterns</strong>, like the "real java developers had"! My lovely singleton. And then, symfony1 was born (still with my lovely singleton). Symfony1 was a big change, it was putting different components together to automate a lot of things. It was like "WOW", we can do real <strong>crazy "professional" stuff</strong> with PHP! I have learnt a lot of things thanks to symfony1 and its beautiful documentation. Separation of concerns, Active Record (using Propel), XSS/CSRF protections, coding standards, unit and functional testing, etc. <strong>I was an adult programmer.</strong></p>
+
+    <p>And the problem when you're an adult programmer is that you start to <strong>think by yourself</strong>. As every symfony1 guy, I was totally excited by Symfony2, just because 2 is twice better than 1. But something was strange to me. I had the feeling that, even if all the concepts were making sense, <strong>something was wrong</strong>. Writing tons of XML to manage separation of concerns, having to hint types in functions, but not all the types, and only in function signatures ... <strong>I was back 10 years ago</strong>, when I made the choice not to go with the Java boilerplate.</p>
+
+    <p>I realised that Symfony2 was trying to <strong>fix the language</strong>, and that we were using "good java practices" with the <strong>wrong tool: PHP</strong>.</p>
+</div>
+
+<div class="full-width">
+
+    <h2>Then you move away from it, the easy way</h2>
+
+    <p><span class="dropcap1">I</span> was at a point where, moving from PHP to something else was easier than it could have been for me some years ago, it's what we can call the "experience" maybe. I learnt a lot with it, but fixing the language by writing abstractions on top of it (also called Symfony components ;) ) was not going to be my next challenge. Because yes, <strong>we need challenge</strong>. And I am pretty convinced that it's why people love Symfony so much. It's giving challenges into something that is far from being sexy or challenging as a language: PHP.</p>
+
+    <p>Well guys, I totally respect what you are able to do with PHP, but you do not think that it's time to move on? To let PHP be a fabulous scripting language for simple stuff like <a href="http://toys.lerdorf.com/archives/38-The-no-framework-PHP-MVC-framework.html"><strong>Rasmus</strong></a> said and to manage complexity with languages that can handle it in a cleaner way? Scala, Closure, Erlang and <strong>functional programming</strong> in general should be your next challenge. If you make the choice to stay with PHP, please, <strong>don't do another Java with it</strong>.</p>
+
+</div>
+
+<div class="full-width">
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'vjousse'; // required: replace example with your forum shortname
+    var disqus_identifier = 'php-love-it-or-leave-it';
+    var disqus_url = 'http://vincent.jousse.org/blog/php-love-it-or-leave-it';
+
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+</div>
+
+}

@@ -13,6 +13,9 @@ POST    /blog/post/create           jousse.controllers.Blog.createPost()
 POST    /blog/post/update/:id       jousse.controllers.Blog.update(id)
 GET     /blog/post/edit/:id         jousse.controllers.Blog.editPost(id)
 
+# Hardcoded URLs
+GET     /blog/php-love-it-or-leave-it                       jousse.controllers.Blog.phpLove()
+
 # Security stuff
 GET     /login                      jousse.controllers.Login.form()
 GET     /logout                     jousse.controllers.Login.logout()
