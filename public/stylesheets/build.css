@@ -56,7 +56,7 @@
 	html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,
 	blockquote,pre,address,code,del,dfn,em,img,q,
 	dl,dt,dd,ol,ul,li,
-	table,caption,tbody,tfoot,thead,tr,th,td,br,fieldset,textarea{font-family:'Droid Sans';font-size: 16px;line-height:1.7em;letter-spacing:.1px;
+	table,caption,tbody,tfoot,thead,tr,th,td,br,fieldset,textarea{font-family:'Droid Sans';font-size: 14px;line-height:1.7em;letter-spacing:.1px;
 	word-spacing:1px;margin:0;padding:0;border:0;vertical-align:baseline;}
 	h1,h2,h3,h4,h5,h6,hr,address,table,form{margin:0;float:left;}
 	p{width:auto;margin-top:20px;clear:both;float:inherit;}
@@ -65,7 +65,7 @@
 
 	/* ------ 2. General ------ */
 
-	body{background:url(../images/background.png) repeat;height:100%;height:auto;font-size:13px;color:#777;font-family:'Droid Sans';}
+	body{background:url(../images/background.png) repeat;height:100%;height:auto;font-size:14px;color:#777;font-family:'Droid Sans';}
 	h1,h2,h3,h4,h5,h6{letter-spacing:1px;}
 	a:link,a:visited,a:hover,a:active,a:focus{text-decoration:none;outline:none;}
 	a{color:#444;}
