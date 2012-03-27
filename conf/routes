@@ -2,11 +2,8 @@
 # This file defines all application routes (Higher priority routes first)
 # ~~~~
 
-# Home page
-GET     /                           jousse.controllers.Application.show(page = "index")
-
 # Blog pages
-GET     /blog                       jousse.controllers.Blog.list()
+GET     /                           jousse.controllers.Blog.list()
 GET     /blog/admin                 jousse.controllers.Blog.admin()
 GET     /blog/post/create           jousse.controllers.Blog.newPost()
 POST    /blog/post/create           jousse.controllers.Blog.createPost()

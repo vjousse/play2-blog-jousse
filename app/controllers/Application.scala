@@ -9,16 +9,14 @@ object Application extends Controller {
   def show(page: String) = {
     import views.html._
     Action {
-      implicit request =>
-      Ok(
+      implicit request ⇒
         page match {
-          case "index"    => index()
-          case "contact"  => contact()
-          case "cv"       => cv()
-          case "research" => research()
-          case _          => error404()
+          case "index"    ⇒ Redirect(routes.Blog.list())
+          case "contact"  ⇒ Ok(contact())
+          case "cv"       ⇒ Ok(cv())
+          case "research" ⇒ Ok(research())
+          case _          ⇒ Ok(error404())
         }
-      )
     }
   }
 
