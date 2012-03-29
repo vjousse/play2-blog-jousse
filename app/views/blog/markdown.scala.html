@@ -1,0 +1,10 @@
+@(postContent: String)(implicit request: Request[AnyContent])
+
+@main("Blog") {
+
+<!-- Content Start -->
+<div class="full-width">
+    @Html(postContent)
+</div>
+
+}

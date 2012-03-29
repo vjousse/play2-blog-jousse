@@ -12,6 +12,7 @@ GET     /blog/post/edit/:id         jousse.controllers.Blog.editPost(id)
 
 # Hardcoded URLs
 GET     /blog/php-love-it-or-leave-it                       jousse.controllers.Blog.phpLove()
+GET     /blog/markdown                                      jousse.controllers.Blog.markdown()
 
 # Security stuff
 GET     /login                      jousse.controllers.Login.form()

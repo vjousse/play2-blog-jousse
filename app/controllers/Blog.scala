@@ -17,10 +17,17 @@ import views.html._
 import jousse.models._
 import jousse.dao._
 import jousse.form.PostForm._
+import jousse.blog.Parser
 
-object Blog extends Controller with Secured {
+object Blog extends CustomController with Secured {
 
   val postForm = form
+
+  def markdown() = Action {
+      implicit request => {
+        Ok(blog.markdown(Parser.parseMd(app.getFile("posts/test.md"))))
+      }
+    }
 
   def phpLove() = Action {
       implicit request =>
