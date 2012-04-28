@@ -1,5 +1,3 @@
-# Trust the h^Wtype
-
 ## Unit testing: your own compiler
 
 I used to write a lot of PHP code, mostly using the symfony framework. When I discovered unit testing with PHP, it was like I had discovered a new way of programming. It was not required anymore to open a web browser to check if my code was working, I could just launch a command line, and the red or green lights would be telling me if my code was working (or at least, not throwing trivial warnings, notices or exceptions). It was a revolution for me.
