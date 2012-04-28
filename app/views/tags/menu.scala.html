@@ -1,11 +1,9 @@
 @(pages: List[(String, String)] = List(("Blog", "index"),("Research","research"),("CV", "cv"), ("Contact","contact")))(implicit request: Request[AnyContent])
 
-@current(route: String) = {
-@{if(request.uri == route || (request.uri.startsWith(route) && route != "/")) "class='current'" }
-}
+@current(route: String) = { @{if(request.uri == route || (request.uri.startsWith(route) && route != "/")) "class='current'" }}
 
 <ul class="nav">
     @for((name,route) <- pages) {
-    <li id="@route"@current(jousse.controllers.routes.Application.show(route) toString)><a href="@jousse.controllers.routes.Application.show(route)">@name</a></li>
+    <li@current(jousse.controllers.routes.Application.show(route) toString)><a href="@jousse.controllers.routes.Application.show(route)">@name</a></li>
     }
 </ul>
