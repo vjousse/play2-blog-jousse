@@ -56,10 +56,10 @@
 	html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,
 	blockquote,pre,address,code,del,dfn,em,img,q,
 	dl,dt,dd,ol,ul,li,
-	table,caption,tbody,tfoot,thead,tr,th,td,br,fieldset,textarea{font-family:'Droid Sans';font-size: 14px;line-height:1.7em;letter-spacing:.1px;
+	table,caption,tbody,tfoot,thead,tr,th,td,br,fieldset,textarea{font-family:'Droid Sans';font-size: 15px;line-height:1.7em;letter-spacing:.1px;
 	word-spacing:1px;margin:0;padding:0;border:0;vertical-align:baseline;}
 	h1,h2,h3,h4,h5,h6,hr,address,table,form{margin:0;float:left;}
-	p{width:auto;margin-top:20px;clear:both;float:inherit;}
+	p{width:auto;margin-top:20px;clear:both;}
 	strong, b{font-weight:bold;}
 	em, dfn, i{font-style:italic;}
 
@@ -88,7 +88,7 @@
 
 	h1,h2,h3,h4,h5,h6{width:100%;font-weight:normal;color:#444;line-height:100%;clear:both;}
 	h1{font-size:24px;font-weight:bold;}
-	h2{font-size:22px;margin: 20px 0 0 0}
+	h2{font-size:22px;margin: 25px 0 20px 0}
 	h3{font-size:18px;}
 	h4{font-size:16px;font-weight:bold;text-transform:uppercase;}
 	h5{font-size:14px;font-weight:bold;text-transform:uppercase;margin:0px 0 10px 0px;}
