@@ -9,16 +9,12 @@ object ApplicationBuild extends Build {
 
     val appDependencies = Seq(
       "com.twitter" % "util-core" % "1.12.4",
-      "com.mongodb.casbah" %% "casbah" % "2.1.5-1",
-      "com.novus" %% "salat-core" % "0.0.8-SNAPSHOT",
       "org.clapper" %% "markwrap" % "0.5.3"
     )
 
     val main = PlayProject(appName, appVersion, appDependencies, mainLang = SCALA).settings(
       resolvers ++= Seq(
         "twitter.com" at "http://maven.twttr.com/",
-        "repo.novus rels" at "http://repo.novus.com/releases/",
-        "repo.novus snaps" at "http://repo.novus.com/snapshots/"
       )
     )
 

@@ -4,20 +4,10 @@
 
 # Blog pages
 GET     /                           jousse.controllers.Blog.list()
-GET     /blog/admin                 jousse.controllers.Blog.admin()
-GET     /blog/post/create           jousse.controllers.Blog.newPost()
-POST    /blog/post/create           jousse.controllers.Blog.createPost()
-POST    /blog/post/update/:id       jousse.controllers.Blog.update(id)
-GET     /blog/post/edit/:id         jousse.controllers.Blog.editPost(id)
 
 # Hardcoded URLs
 GET     /blog/php-love-it-or-leave-it                       jousse.controllers.Blog.phpLove()
 GET     /blog/markdown                                      jousse.controllers.Blog.markdown()
-
-# Security stuff
-GET     /login                      jousse.controllers.Login.form()
-GET     /logout                     jousse.controllers.Login.logout()
-POST    /blog/authenticate          jousse.controllers.Login.authenticate()
 
 # Default pages
 GET     /:page                      jousse.controllers.Application.show(page)
