@@ -60,11 +60,10 @@ Here is the error message when trying to compile:
                 ^
     one error found
 
-You can see that the compiler has guessed (aka inferred) the type of _test_.
-The type issue is then raised early, without testing.
+You can see that the compiler has guessed (aka inferred) the type of _test_. The type issue is then raised early, without having to write/launch tests for it. With such type inference, you have the benefit of dymamic languages (you don't have to care about defining types) with the benefit of a strong type system (check errors at compile time, reduce number of trivial unit tests).
 
 ## The compiler is your friend
 
 If you are using a language like PHP (or some other dynamic language) and you are writing tons of unit tests to cover your (hypothetical? ;) ) refactoring, specifying types hints in function parameters (typical in PHP those days) you should really ask yourself if you are using the right tool for the job.
 
-Using a srongly typed language with type inference (like Scala or Haskell) could save you plenty of time. You'll have the unique sensation that: "once it compiles, it will most likely work". You should think twice about it. Join the hype and compile like a pro.
+Using a srongly typed language with type inference (like Scala or Haskell) could save you plenty of time and ease your refactoring sessions. You'll have the unique sensation that: "once it compiles, it will most likely work". You should think twice about it. Join the hype and compile like a pro.
