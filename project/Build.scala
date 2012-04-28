@@ -14,7 +14,7 @@ object ApplicationBuild extends Build {
 
     val main = PlayProject(appName, appVersion, appDependencies, mainLang = SCALA).settings(
       resolvers ++= Seq(
-        "twitter.com" at "http://maven.twttr.com/",
+        "twitter.com" at "http://maven.twttr.com/"
       )
     )
 
