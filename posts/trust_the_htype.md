@@ -35,7 +35,7 @@ But obviously in PHP it just works. I mean, it does not complain:
 
     #!php
     <?php
-    echo $bar;
+    echo $bar; // -2
 
 And it displays ... the number -2 (seriously? ;) ).
 Even if it had resulted in a warning or notice, it would only be at runtime. And I need to write a test to reproduce it.
