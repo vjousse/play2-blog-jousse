@@ -10,7 +10,7 @@ It took me a while to realize that for each and every project that I was doing i
 
 I was re-inventing the wheel because languages with a compiler were (to me) really verbose for a little added value. Having to tell to Java that _"foo"_ must be treated as a string and _2_ as an integer, and _3.2_ as a float number, and _new User()_ as a _User_ was adding a lot of boilerplate to the code:
 
-    !java
+    #!java
     String test = "foo";
     int two = 2;
     float three = 3.2;
@@ -18,7 +18,8 @@ I was re-inventing the wheel because languages with a compiler were (to me) real
 
 In PHP it was more easy:
 
-    !php
+    #!php
+    <?php
     $test = "foo";
     $two = 2;
     $three = 3.2;
@@ -26,12 +27,14 @@ In PHP it was more easy:
 
 But what I loosed in PHP was that substracting a number to a string should not be permitted:
 
-    !php
+    #!php
+    <?php
     $bar = $test - $two;
 
 But obviously in PHP it just works. I mean, it does not complain:
 
-    !php
+    #!php
+    <?php
     echo $bar;
 
 And it displays ... the number -2 (seriously? ;) ).
@@ -39,7 +42,7 @@ Even if it had resulted in a warning or notice, it would only be at runtime. And
 
 So what about something like that (example in Scala):
 
-    !scala
+    #!scala
     val test = "foo"
     val two = 2
     val three = 3.2
@@ -47,7 +50,7 @@ So what about something like that (example in Scala):
 
 You don't have to specify the types (like in PHP), but it complains when you try to do:
 
-    !scala
+    #!scala
     val bar = test - two
 
 Here is the error message when trying to compile:

@@ -70,10 +70,10 @@
 	a:link,a:visited,a:hover,a:active,a:focus{text-decoration:none;outline:none;}
 	a{color:#444;}
 	a:hover{color:#777;}
-	pre,code{white-space:pre;clear:both;float:none;}
-	code{background:#FFF;display:inline;border:1px solid #CCC;padding:2px;}
-	pre > code{background:#FFF;display:block;border:1px solid #CCC;padding:5px;font-size:12px;}
-	pre{background:#F5F5F5;display:block;border:1px solid #CCC;padding:5px;font-size:12px;}
+	pre,code{white-space:pre;display:block;clear:both;float:none;}
+	/*code{background:#FFF;display:inline;border:1px solid #CCC;padding:2px;}*/
+	/*pre > code{background:#FFF;display:block;border:1px solid #CCC;padding:5px;font-size:12px;}*/
+	/*pre{background:#F5F5F5;display:block;border:1px solid #CCC;padding:5px;font-size:12px;}*/
 
 	/* ------ 3. List Styles ------ */
 
