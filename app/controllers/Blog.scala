@@ -10,14 +10,14 @@ import play.api.data.format.Formats._
 import play.api.data.validation.Constraints._
 
 import views.html._
-import jousse.blog.Parser
 
 object Blog extends CustomController {
 
   def markdown() = Action {
       implicit request => {
         conf("blog.remoteParserUrl").map { remoteParserUrl =>
-          Ok(blog.markdown("Trust the h^Wtype", new java.util.Date(), Parser.parseMd(app.getFile("posts/trust_the_htype.md"), remoteParserUrl), "trust_the_htype"))
+          //Ok(blog.markdown("Trust the h^Wtype", new java.util.Date(), Parser.parseMd(app.getFile("posts/2012-05-02-trust-the-htype.md"), remoteParserUrl), "trust_the_htype"))
+          Ok("Test")
         } getOrElse(InternalServerError("No remote parser available."))
       }
     }
