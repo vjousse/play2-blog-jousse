@@ -4,7 +4,10 @@ import play.api.test._
 import play.api.test.Helpers._
 
 import jousse.blog.Parser
+import jousse.blog.Post
 import jousse.blog.PostService
+
+import java.text.SimpleDateFormat
 
 case class DummyParser() extends Parser {
   def parse(content: String): String = content
@@ -13,8 +16,8 @@ case class DummyParser() extends Parser {
 class PostSpec extends Specification with ScalazValidationMatchers {
 
   val postHeaders = """
-title: Test title
-date: "2012-05-02"
+title: New Test title
+date: "02-05-2012"
 ---
 """
   val postContent = """
@@ -35,12 +38,11 @@ And _some_ random *content*.
       post must beSuccess
     }
 
-    "extract the title" in {
-      post.toOption must beSome.which(_.title == "Test title")
+
+    "extract all informations" in {
+      val formatter = new SimpleDateFormat("dd-MM-yyyy");
+      post must succeedWith(Post("New Test title", postContent, formatter.parse("02-05-2012")))
     }
 
-    "parse the content" in {
-      post.toOption must beSome.which(_.content == postContent)
-    }
   }
 }
