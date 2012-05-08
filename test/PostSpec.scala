@@ -10,11 +10,11 @@ case class DummyParser() extends Parser {
   def parse(content: String): String = content
 }
 
-class PostSpec extends Specification {
+class PostSpec extends Specification with ScalazValidationMatchers {
 
   val postHeaders = """
 title: Test title
-date: 2012-05-02
+date: "2012-05-02"
 ---
 """
   val postContent = """
@@ -30,15 +30,17 @@ And _some_ random *content*.
 
   val post = postService.postFromMarkdown(postValue.lines toList)
 
-  "The post title" should {
-    "be 'Test title'" in {
-      post must beSome.which(_.title == "Test title")
+  "The post parsing" should {
+    "be successful" in {
+      post must beSuccess
     }
-  }
 
-  "The post content" should {
-    "be not be changed" in {
-      post must beSome.which(_.content == postContent)
+    "extract the title" in {
+      post.toOption must beSome.which(_.title == "Test title")
+    }
+
+    "parse the content" in {
+      post.toOption must beSome.which(_.content == postContent)
     }
   }
 }

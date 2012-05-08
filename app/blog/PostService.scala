@@ -1,11 +1,16 @@
 package jousse
 package blog
 
+import Error.unsafeValidation
+
 import java.util.Date
 import java.io.File
 
 import scala.io.Source
 import scala.collection.JavaConversions._
+
+import com.typesafe.config.{ Config, ConfigFactory }
+import scalaz.Validation
 
 case class PostService(parser: Parser) {
 
@@ -15,19 +20,20 @@ case class PostService(parser: Parser) {
 
     val posts: List[Post] = (files.map { file ⇒
       postFromMarkdown(Source.fromFile(file).getLines.toList)
-    } toList).flatten
+      }).map { postValidation =>
+        postValidation.toOption
+    }.flatten
 
     posts
   }
 
-  def postFromMarkdown(lines: List[String]): Option[Post] =  {
+  //TODO: Use a scalaz validation or Either here
+  def postFromMarkdown(lines: List[String]): Validation[Exception,Post] =  unsafeValidation {
     val (header, content) = lines.span(l ⇒ l.trim != "---")
 
-    if (!header.isEmpty && !content.isEmpty) {
-      Some(Post("Test title", parser.parse(content.tail.mkString("\n")), new Date))
-    } else {
-      None
-    }
+    val conf: Config = ConfigFactory.parseString(header.mkString("\n"))
+
+    Post("Test title", parser.parse(content.tail.mkString("\n")), new Date)
   }
 
 }
