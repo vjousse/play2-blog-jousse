@@ -5,7 +5,7 @@ import scala.io.Source
 import java.io.File
 import play.api.libs.ws.WS
 
-case class RemoteParser(remoteParserUrl: String) {
+case class RemoteParser(remoteParserUrl: String) extends Parser {
 
   def parseMd(content: String): String = {
     val promise = WS.url(remoteParserUrl).post(content).map { response =>
@@ -18,4 +18,7 @@ case class RemoteParser(remoteParserUrl: String) {
     val lines = Source.fromFile(file).mkString
     parseMd(lines)
   }
+
+  def parse(content: String): String = parseMd(content)
+
 }
