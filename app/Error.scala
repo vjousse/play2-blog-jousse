@@ -1,4 +1,5 @@
 package jousse
+import scalaz.{Validation, Failure, Success}
 
 case class Error(msg: String, exception: String = "") {
 
@@ -14,4 +15,9 @@ object Error {
     case exception => None
   }
 
+  def unsafeValidation[A](op: => A): Validation[Exception,A] = try {
+    Success(op)
+  } catch {
+    case e: Exception => Failure(e)
+  }
 }
