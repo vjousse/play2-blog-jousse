@@ -13,18 +13,21 @@ case class PostService(parser: Parser) {
 
     val files: List[File] = Option(directory.listFiles) map { _ toList } getOrElse (Nil)
 
-    val posts: List[Post] = files.map { file ⇒
+    val posts: List[Post] = (files.map { file ⇒
       postFromMarkdown(Source.fromFile(file).getLines.toList)
-    } toList
+    } toList).flatten
 
     posts
   }
 
-  def postFromMarkdown(lines: List[String]): Post = {
-    val header = lines.takeWhile(l ⇒ l.trim != "---")
-    val content = lines.dropWhile(l ⇒ l.trim != "---").tail.mkString("\n")
+  def postFromMarkdown(lines: List[String]): Option[Post] =  {
+    val (header, content) = lines.span(l ⇒ l.trim != "---")
 
-    Post("Test title", parser.parse(content), new Date)
+    if (!header.isEmpty && !content.isEmpty) {
+      Some(Post("Test title", parser.parse(content.tail.mkString("\n")), new Date))
+    } else {
+      None
+    }
   }
 
 }

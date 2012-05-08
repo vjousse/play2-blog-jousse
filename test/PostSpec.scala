@@ -32,13 +32,13 @@ And _some_ random *content*.
 
   "The post title" should {
     "be 'Test title'" in {
-      post.title mustEqual "Test title"
+      post must beSome.which(_.title == "Test title")
     }
   }
 
   "The post content" should {
     "be not be changed" in {
-      post.content mustEqual postContent
+      post must beSome.which(_.content == postContent)
     }
   }
 }
