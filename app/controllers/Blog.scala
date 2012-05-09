@@ -15,7 +15,7 @@ object Blog extends CustomController {
 
   def markdown() = Action {
       implicit request => {
-        conf("blog.remoteParserUrl").map { remoteParserUrl =>
+        env.remoteParserUrl.map { remoteParserUrl =>
           //Ok(blog.markdown("Trust the h^Wtype", new java.util.Date(), Parser.parseMd(app.getFile("posts/2012-05-02-trust-the-htype.md"), remoteParserUrl), "trust_the_htype"))
           Ok("Test")
         } getOrElse(InternalServerError("No remote parser available."))
