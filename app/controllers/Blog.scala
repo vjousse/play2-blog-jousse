@@ -29,7 +29,7 @@ object Blog extends CustomController {
 
   def list() = Action {
       implicit request =>
-        Ok(blog.list())
+        Ok(blog.list(env.postService.postList(env.postsDirectory)))
     }
 
 }

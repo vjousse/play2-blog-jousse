@@ -1,5 +1,5 @@
-title: Trust the h^Wtype
-date: 2012-05-02
+title: "Trust the h^Wtype"
+date: "2012-05-02"
 ---
 ## Unit testing: your own compiler
 

@@ -19,13 +19,12 @@ case class PostService(parser: Parser) {
 
     val files: List[File] = Option(directory.listFiles) map { _ toList } getOrElse (Nil)
 
-    val posts: List[Post] = (files.map { file ⇒
+    (files.map { file ⇒
       postFromMarkdown(Source.fromFile(file).getLines.toList)
     }).map { postValidation ⇒
       postValidation.toOption
     }.flatten
 
-    posts
   }
 
   //TODO: Use a scalaz validation or Either here

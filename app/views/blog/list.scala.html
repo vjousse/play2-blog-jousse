@@ -1,10 +1,22 @@
-@()(implicit request: Request[AnyContent])
+@(posts: List[jousse.blog.Post])(implicit request: Request[AnyContent])
 
 @sampleImage = { @routes.Assets.at("images/featured-image.png") }
 
 @main("Blog") {
 
 <!-- Content Start -->
+@for(p <- posts) {
+
+<div class="full-width">
+    <h1><a href="#">@p.title</a></h1>
+    <div class="horizontal-rule"></div>
+    <div class="blog-data">Posted <span class="black">@p.createdAt</span> by <span class="black"><a href="http://twitter.com/vjousse">Vincent Jousse</a></span></div>
+    <div class="horizontal-rule"></div>
+    @Html(p.content)
+    <div class="medium button"><a href="#">Read More</a></div>
+</div>
+}
+
 <div class="full-width">
     <h1><a href="@jousse.controllers.routes.Blog.phpLove()">PHP: You love it or you leave it</a></h1>
     <div class="horizontal-rule"></div>
