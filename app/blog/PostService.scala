@@ -1,7 +1,7 @@
 package jousse
 package blog
 
-import Error.unsafeValidation
+import Error.{unsafeValidation, unsafeOption}
 
 import java.util.Date
 import java.io.File
@@ -36,7 +36,8 @@ case class PostService(parser: Parser) {
 
     Post(conf.getString("title"),
       parser.parse(content.tail.mkString("\n")),
-      formatter.parse(conf.getString("date")))
+      formatter.parse(conf.getString("date")),
+      unsafeOption(conf.getString("description")))
   }
 
 }
