@@ -12,7 +12,11 @@
     <div class="horizontal-rule"></div>
     <div class="blog-data">Posted <span class="black">@p.createdAt</span> by <span class="black"><a href="http://twitter.com/vjousse">Vincent Jousse</a></span></div>
     <div class="horizontal-rule"></div>
-    @Html(p.content)
+    @if(!p.description.isEmpty) {
+    <p>
+        @Html(p.description.get)
+    </p>
+    }
     <div class="medium button"><a href="#">Read More</a></div>
 </div>
 }
