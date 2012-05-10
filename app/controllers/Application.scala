@@ -15,7 +15,7 @@ object Application extends Controller {
           case "contact"  ⇒ Ok(contact())
           case "cv"       ⇒ Ok(cv())
           case "research" ⇒ Ok(research())
-          case _          ⇒ Ok(error404())
+          case _          ⇒ NotFound(views.html.error404())
         }
     }
   }

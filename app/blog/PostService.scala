@@ -11,24 +11,37 @@ import scala.io.Source
 import scala.collection.JavaConversions._
 
 import com.typesafe.config.{ Config, ConfigFactory }
-import scalaz.Validation
+import scalaz.{Validation, Failure}
 
-case class PostService(parser: Parser) {
+case class PostService(parser: Parser, directory: File) {
 
-  def postList(directory: File): List[Post] = {
+  def findPostBySlug(slug: String): Option[Post] = {
+    val file = new File(directory, slug + ".md")
+    if (file.exists) {
+      postFromFile(file).toOption
+    } else {
+      None
+    }
+  }
+
+  def postFromFile(file: File): Validation[Exception, Post] = {
+    postFromMarkdown(Source.fromFile(file).getLines.toList,
+        unsafeOption(file.getName.substring(0,file.getName.lastIndexOf('.'))))
+  }
+
+  def postList(): List[Post] = {
 
     val files: List[File] = Option(directory.listFiles) map { _ toList } getOrElse (Nil)
 
     (files.map { file ⇒
-      postFromMarkdown(Source.fromFile(file).getLines.toList)
+      postFromFile(file)
     }).map { postValidation ⇒
       postValidation.toOption
-    }.flatten
+    }.flatten.reverse
 
   }
 
-  //TODO: Use a scalaz validation or Either here
-  def postFromMarkdown(lines: List[String]): Validation[Exception, Post] = unsafeValidation {
+  def postFromMarkdown(lines: List[String], slug: Option[String] = None): Validation[Exception, Post] = unsafeValidation {
     val (header, content) = lines.span(l ⇒ l.trim != "---")
 
     val conf: Config = ConfigFactory.parseString(header.mkString("\n"))
@@ -37,7 +50,8 @@ case class PostService(parser: Parser) {
     Post(conf.getString("title"),
       parser.parse(content.tail.mkString("\n")),
       formatter.parse(conf.getString("date")),
-      unsafeOption(conf.getString("description")))
+      unsafeOption(conf.getString("description")),
+      slug)
   }
 
 }

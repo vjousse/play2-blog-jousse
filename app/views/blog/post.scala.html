@@ -1,0 +1,33 @@
+@(post: jousse.blog.Post)
+
+@import jousse.util.Templating._
+
+@main("Blog", "/blog") {
+
+<!-- Content Start -->
+<div class="full-width" style="margin-bottom: 0px">
+    <h1>@post.title</h1>
+    <div class="horizontal-rule"></div>
+    <div class="blog-data">Posted <span class="black">@post.createdAt</span> by <span class="black"><a href="http://twitter.com/vjousse">Vincent Jousse</a></span></div>
+</div>
+<div class="full-width" style="margin-top: 0px">
+    @Html(post.content)
+</div>
+
+<div class="full-width">
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'vjousse'; // required: replace example with your forum shortname
+    var disqus_identifier = '@post.slug';
+
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+</div>
+
+}

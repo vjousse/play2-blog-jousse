@@ -3,14 +3,14 @@
 # ~~~~
 
 # Blog pages
-GET     /                           jousse.controllers.Blog.list()
+GET     /                                  jousse.controllers.Blog.list()
 
 # Hardcoded URLs
-GET     /blog/php-love-it-or-leave-it                       jousse.controllers.Blog.phpLove()
-GET     /blog/markdown                                      jousse.controllers.Blog.markdown()
+GET     /blog/php-love-it-or-leave-it      jousse.controllers.Blog.phpLove()
+GET     /blog/:slug                        jousse.controllers.Blog.post(slug)
 
 # Default pages
-GET     /:page                      jousse.controllers.Application.show(page)
+GET     /:page                             jousse.controllers.Application.show(page)
 
 # Map static resources from the /public folder to the /assets URL path
-GET     /static/*file               controllers.Assets.at(path="/public", file)
+GET     /static/*file                      controllers.Assets.at(path="/public", file)

@@ -1,6 +1,6 @@
-@(pages: List[(String, String)] = List(("Blog", "index"),("Research","research"),("CV", "cv"), ("Contact","contact")))(implicit request: Request[AnyContent])
+@(parent: String, pages: List[(String, String)] = List(("Blog", "index"),("Research","research"),("CV", "cv"), ("Contact","contact")))
 
-@current(route: String) = { @{if(request.uri == route || (request.uri.startsWith(route) && route != "/")) "class='current'" }}
+@current(route: String) = { @{if(parent == route || (parent.startsWith(route) && route != "/")) "class='current'" }}
 
 <ul class="nav">
     @for((name,route) <- pages) {

@@ -8,7 +8,11 @@
 @for(p <- posts) {
 
 <div class="full-width">
-    <h1><a href="#">@p.title</a></h1>
+    @if(!p.slug.isEmpty) {
+        <h1><a href="@jousse.controllers.routes.Blog.post(p.slug.get)">@p.title</a></h1>
+    } else {
+        <h1><a href="/not-found">@p.title</a></h1>
+    }
     <div class="horizontal-rule"></div>
     <div class="blog-data">Posted <span class="black">@p.createdAt</span> by <span class="black"><a href="http://twitter.com/vjousse">Vincent Jousse</a></span></div>
     <div class="horizontal-rule"></div>
@@ -17,7 +21,7 @@
         @Html(p.description.get)
     </p>
     }
-    <div class="medium button"><a href="#">Read More</a></div>
+    <div class="medium button"><a href="@jousse.controllers.routes.Blog.post(p.slug.get)">Read More</a></div>
 </div>
 }
 

@@ -1,4 +1,4 @@
-@(title: String, slogan: Html = Html(""))(content: Html)(implicit request: Request[AnyContent])
+@(title: String, parent: String = "/", slogan: Html = Html(""))(content: Html)
 
 @import tags.menu
 
@@ -25,7 +25,7 @@
 
         <!-- Navigation Start -->
         <div id="nav-wrapper">
-            @menu()
+            @menu(parent)
         </div>
         <!-- Navigation End -->
 
@@ -42,7 +42,7 @@
 
         <!-- Footer Start -->
         <div id="footer-wrapper">
-            @menu()
+            @menu(parent)
             <div id="footer-logo"></div>
             <div id="footer-copyright">License: <a href="http://creativecommons.org/licenses/by-nc-sa/2.0/">Creative Commons by-nc-sa</a></div>
         </div>

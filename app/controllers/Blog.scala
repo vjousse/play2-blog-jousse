@@ -13,15 +13,6 @@ import views.html._
 
 object Blog extends CustomController {
 
-  def markdown() = Action {
-      implicit request => {
-        env.remoteParserUrl.map { remoteParserUrl =>
-          //Ok(blog.markdown("Trust the h^Wtype", new java.util.Date(), Parser.parseMd(app.getFile("posts/2012-05-02-trust-the-htype.md"), remoteParserUrl), "trust_the_htype"))
-          Ok("Test")
-        } getOrElse(InternalServerError("No remote parser available."))
-      }
-    }
-
   def phpLove() = Action {
       implicit request =>
         Ok(blog.phpLove())
@@ -29,7 +20,13 @@ object Blog extends CustomController {
 
   def list() = Action {
       implicit request =>
-        Ok(blog.list(env.postService.postList(env.postsDirectory)))
+        Ok(blog.list(env.postService.postList()))
     }
 
+  def post(slug: String) = Action {
+      implicit request => env.postService.findPostBySlug(slug) match {
+        case Some(p) => Ok(blog.post(p))
+        case None => NotFound(views.html.error404())
+      }
+    }
 }

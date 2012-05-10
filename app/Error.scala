@@ -18,6 +18,8 @@ object Error {
   def unsafeValidation[A](op: => A): Validation[Exception,A] = try {
     Success(op)
   } catch {
-    case e: Exception => Failure(e)
+    case e: Exception => {
+      println(e)
+      Failure(e)}
   }
 }
