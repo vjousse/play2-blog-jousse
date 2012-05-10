@@ -1,6 +1,6 @@
 @(posts: List[jousse.blog.Post])(implicit request: Request[AnyContent])
 
-@sampleImage = { @routes.Assets.at("images/featured-image.png") }
+@import jousse.util.Templating._
 
 @main("Blog") {
 
@@ -14,7 +14,7 @@
         <h1><a href="/not-found">@p.title</a></h1>
     }
     <div class="horizontal-rule"></div>
-    <div class="blog-data">Posted <span class="black">@p.createdAt</span> by <span class="black"><a href="http://twitter.com/vjousse">Vincent Jousse</a></span></div>
+    <div class="blog-data">Posted <span class="black">@formatDate(p.createdAt)</span> by <span class="black"><a href="http://twitter.com/vjousse">Vincent Jousse</a></span></div>
     <div class="horizontal-rule"></div>
     @if(!p.description.isEmpty) {
     <p>

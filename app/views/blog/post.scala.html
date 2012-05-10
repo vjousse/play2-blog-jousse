@@ -8,7 +8,7 @@
 <div class="full-width" style="margin-bottom: 0px">
     <h1>@post.title</h1>
     <div class="horizontal-rule"></div>
-    <div class="blog-data">Posted <span class="black">@post.createdAt</span> by <span class="black"><a href="http://twitter.com/vjousse">Vincent Jousse</a></span></div>
+    <div class="blog-data">Posted <span class="black">@formatDate(post.createdAt)</span> by <span class="black"><a href="http://twitter.com/vjousse">Vincent Jousse</a></span></div>
 </div>
 <div class="full-width" style="margin-top: 0px">
     @Html(post.content)

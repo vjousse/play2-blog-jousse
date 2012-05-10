@@ -45,7 +45,7 @@ case class PostService(parser: Parser, directory: File) {
     val (header, content) = lines.span(l ⇒ l.trim != "---")
 
     val conf: Config = ConfigFactory.parseString(header.mkString("\n"))
-    val formatter = new SimpleDateFormat("dd-MM-yyyy")
+    val formatter = new SimpleDateFormat("yyyy-MM-dd")
 
     Post(conf.getString("title"),
       parser.parse(content.tail.mkString("\n")),
