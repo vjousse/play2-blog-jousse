@@ -6,7 +6,10 @@
 GET     /                                  jousse.controllers.Blog.list()
 
 # Hardcoded URLs
-GET     /blog/php-love-it-or-leave-it      jousse.controllers.Blog.phpLove()
+
+# Compatibility route
+GET     /blog/php-love-it-or-leave-it      jousse.controllers.Blog.post(slug = "2012-03-07-php-you-love-it-or-you-leave-it")
+
 GET     /blog/:slug                        jousse.controllers.Blog.post(slug)
 
 # Default pages

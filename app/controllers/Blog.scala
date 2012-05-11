@@ -13,11 +13,6 @@ import views.html._
 
 object Blog extends CustomController {
 
-  def phpLove() = Action {
-      implicit request =>
-        Ok(blog.phpLove())
-    }
-
   def list() = Action {
       implicit request =>
         Ok(blog.list(env.postService.postList()))

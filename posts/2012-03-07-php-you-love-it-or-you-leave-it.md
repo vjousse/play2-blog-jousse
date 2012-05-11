@@ -1,5 +1,6 @@
 title: "PHP: You love it or you leave it"
 date: "2012-03-07"
+id:"php-love-it-or-leave-it"
 description: "I do love PHP. Well, to be more precise, I used to love PHP a lot, and I still respect it and people using/improving it. You can do whatever you want with PHP, from the very quick and dirty way, to the bloated framework way (oh c'mon). But it's maybe the right time to move on."
 ---
 ## PHP is great to start with
