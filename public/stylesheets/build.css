@@ -71,6 +71,8 @@
 	a{color:#444;}
 	a:hover{color:#777;}
 	pre,code{white-space:pre;display:block;clear:both;float:none;}
+
+	.post code{white-space:pre;display:inline;float:none; background-color:#002B36;color:#93A1A1;padding: 2px;border-radius:3px;}
 	/*code{background:#FFF;display:inline;border:1px solid #CCC;padding:2px;}*/
 	/*pre > code{background:#FFF;display:block;border:1px solid #CCC;padding:5px;font-size:12px;}*/
 	/*pre{background:#F5F5F5;display:block;border:1px solid #CCC;padding:5px;font-size:12px;}*/
