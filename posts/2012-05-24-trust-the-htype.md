@@ -1,6 +1,6 @@
 title: "Trust the h^Wtype"
 description: "I've recently switched (back) to compiled languages like Scala or Haskell. Doing so, I've re-discovered the joy of having a type system and a compiler. And more especially, I've discovered that half of the test I was writing were useless."
-date: "2012-05-02"
+date: "2012-05-24"
 ---
 ## Unit testing: your own compiler
 
