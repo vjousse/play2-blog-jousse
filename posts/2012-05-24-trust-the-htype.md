@@ -69,3 +69,5 @@ You can see that the compiler has guessed (aka inferred) the type of _test_. The
 If you are using a language like PHP (or some other dynamic language) and you are writing tons of unit tests to cover your (hypothetical? ;) ) refactoring, specifying types hints in function parameters (typical in PHP those days) you should really ask yourself if you are using the right tool for the job.
 
 Using a srongly typed language with type inference (like Scala or Haskell) could save you plenty of time and ease your refactoring sessions. You'll have the unique sensation that: "once it compiles, it will most likely work". You should think twice about it. Join the hype and compile like a pro.
+
+_Code highlighting provided by [Pygala](http://pygala.jousse.org)_.
