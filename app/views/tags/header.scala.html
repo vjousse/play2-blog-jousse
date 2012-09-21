@@ -1,0 +1,14 @@
+@(title: String, createdAt: java.util.Date, content: String)
+
+@import jousse.util.Templating._
+
+<!-- Content Start -->
+<div class="full-width" style="margin-bottom: 0px; margin-top:50px;">
+    <h1>@title</h1>
+    <div class="blog-data">Posté le <span class="black">@formatDate(createdAt)</span> par <span class="black"><a href="http://twitter.com/vjousse">Vincent Jousse</a></span></div>
+</div>
+
+<div class="full-width post" style="margin-top: 0px">
+    @Html(content)
+</div>
+

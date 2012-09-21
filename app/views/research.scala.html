@@ -3,37 +3,38 @@
 @main("Recherche", "/research") {
 
 <div class="three-fourth">
-    <h1>Named speaker identification</h1>
+    <h1>Identification nommée du locuteur</h1>
 
     <div id="testimonials-wrapper">
         <div id="testimonials-header"></div>
         <div id="testimonials-body">
             <div id="testimonials-speech-top"></div>
             <div id="testimonial">
-                <p>Named speaker identification tries to answer a very simple question: <strong>who is speaking and when</strong>?</p>
-                <p>Such a simple question for more than 3 years of work. You'll find below all my papers (french and english) on the subject and the final version of my phd thesis (in french).</p>
+                <p>L'identification nommée du locuteur essaie de répondre à une question simple : <strong>qui parle et quand</strong>?</p>
+                <p>Une question si simple pour plus de 3 ans de travaux. Vous trouverez ci-dessous mes publications sur le sujet et la version finale de ma thèse.</p>
             </div>
             <div id="testimonials-speech-bottom"></div>
         </div>
         <div id="testimonials-footer"></div>
     </div>
 
-    <h2>Abstract</h2>
-    <p>The automatic processing of speech is an area that encompasses a large number of works: speaker recognition, named entities detection or transcription of the audio signal into words. Automatic speech processing techniques can extract number of information from audio documents (meetings, shows, etc..) such as transcription, some annotations (the type of show, the places listed, etc..) or even information concerning speakers (speaker change, gender of speaker). All this information can be exploited by automatic indexing techniques which will allow indexing of large document collections.</p>
+    <h2>Résumé</h2>
 
-    <p>The work presented in this thesis are interested in the automatic indexing of speakers in french audio documents. Specifically we try to identify the various contributions of a speaker and nominate them by their first and last name. This process is known as named identification of the speaker. The particularity of this work lies in the joint use of audio and its transcript to name the speakers of a document. The first and last name of each speaker is extracted from the document itself (from its rich transcription more accurately), before being assigned to one of the speakers of the document.</p>
+    <p>Le traitement automatique de la parole est un domaine qui englobe un grand nombre de travaux : de la reconnaissance automatique du locuteur à la détection des entités nommées en passant par la transcription en mots du signal audio. Les techniques de traitement automatique de la parole permettent d’extraire nombre d’informations des documents audio (réunions, émissions, etc.) comme la transcription, certaines annotations (le type d’émission, les lieux cités, etc.) ou encore des informations relatives aux locuteurs (changement de locuteur, genre du locuteur). Toutes ces informations peuvent être exploitées par des techniques d’indexation automatique qui vont permettre d’indexer de grandes collections de documents.</p>
 
-    <p>We begin by describing the context and previous work on the speaker named identification process before submitting <em>Milesin</em>, the system developed during this thesis. The contribution of this work lies firstly in the use of an automatic detector of named entities (LIA_NE) to extract the first name / last name of the transcript. Afterwards, they rely on the theory of belief functions to perform the assignment to the speakers of the document and thus take into account the various conflicts that may arise. Finally, an optimal assignment algorithm is proposed.</p>
+    <p>Les travaux présentés dans cette thèse s’intéressent à l’indexation automatique de locuteurs dans des documents audio en français. Plus précisément nous cherchons à identifier les différentes interventions d’un locuteur ainsi qu’à les nommer par leur prénom et leur nom. Ce processus est connu sous le nom d’identification nommée du locuteur (INL). La particularité de ces travaux réside dans l’utilisation conjointe du signal audio et de sa transcription en mots pour nommer les locuteurs d’un document. Le prénom et le nom de chacun des locuteurs est extrait du document lui même (de sa transcription enrichie plus exactement), avant d’être affecté à un des locuteurs du document.</p>
 
-    <p>This system gives an error rate of between 12 and 20&nbsp;% on reference transcripts (done manually) based on the corpus used. We then present the advances and limitations highlighted by this work. We propose an initial study of the impact of the use of fully automatic transcriptions on <em>Milesin</em>.<p>
+    <p>Nous commençons par rappeler le contexte et les précédents travaux réalisés sur l’INL avant de présenter Milesin, le système développé lors de cette thèse. L’apport de ces travaux réside tout d’abord dans l’utilisation d’un détecteur automatique d’entités nommées (LIA_NE) pour extraire les couples prénom / nom de la transcription. Ensuite, ils s’appuient sur la théorie des fonctions de croyance pour réaliser l’affectation aux locuteurs du document et prennent ainsi en compte les différents conflits qui peuvent apparaître. Pour finir, un algorithme optimal d’affectation est proposé.</p>
+
+    <p>Ce système obtient un taux d’erreur compris entre 12 et 20 % sur des transcriptions de référence (réalisées manuellement) en fonction du corpus utilisé. Nous présentons ensuite les avancées réalisées et les limites mises en avant par ces travaux. Nous proposons notamment une première étude de l’impact de l’utilisation de transcriptions entièrement automatiques sur Milesin.</p>
 </div>
 
 <!-- Navigation Widget Start -->
 <div class="one-fourth-last">
-    <h5>Useful links</h5>
+    <h5>Liens utiles</h5>
     <div class="horizontal-rule"></div>
-    <ul class="widget-list black-pencil">
-        <li><a href="#biblio">Bibliography</a></li>
+    <ul class="widget-list">
+        <li><a href="#biblio">Bibliographie</a></li>
         <li><a href="http://github.com/vjousse/phd-thesis">Phd thesis source (.tex)</a></li>
         <li><a href="http://www-lium.univ-lemans.fr/fr/content/liumspkdiarization">LIUM tools</a></li>
         <li><a href="http://lia.univ-avignon.fr/fileadmin/documents/Users/Intranet/chercheurs/bechet/download_fred.html">LIA tools</a></li>
@@ -47,42 +48,42 @@
     <div class="thirty-margin-filler"></div>
 
     <a name="biblio"></a>
-    <h2>Bibliography</h2>
+    <h2>Bibliographie</h2>
     <div class="thirty-margin-filler"></div>
     <ul class="list-circle" style="float:none;clear:both;">
         <li><strong class="green">Jousse V</strong>. <strong><em>Identification nommée du locuteur : exploitation conjointe du signal sonore et de sa transcription</em></strong>. Manuscrit de thèse. Soutenue le 4 mai 2011.</li>
-        <li class="download"><a href="@routes.Assets.at("resources/pdf/jousse-phd-thesis.pdf")">Download PDF</a></li>
+        <li class="download"><a href="@routes.Assets.at("resources/pdf/jousse-phd-thesis.pdf")">Télécharger le PDF</a></li>
         <li>Estève Y, Deléglise P, Meignier S, Petitrenaud S, Schwenk H, Barrault L, Bougares F, Dufour R, <strong class="green">Jousse V</strong>, Laurent A, Rousseau A .  <strong><em>Some recent research work at LIUM based on the use of CMU Sphinx.</em></strong> CMU SPUD Workshop, Dallas(Texas), march 13, 2010. Article court, 6 pages.</li>
-        <li class="download"><a href="@routes.Assets.at("resources/pdf/some-recent-research-work.pdf")">Download PDF</a></li>
+        <li class="download"><a href="@routes.Assets.at("resources/pdf/some-recent-research-work.pdf")">Télécharger le PDF</a></li>
 
         <li>Petitrenaud S, <strong class="green">Jousse V</strong>, Meignier S, Estève Y .  <strong><em>Speaker identification using belief functions.</strong></em> Information Processing and Management of Uncertainty (IPMU'10), Dortmund(Germany), 28 june- 2 july 2010. Article court, Part I, pp. 179-188.</li>
-        <li class="download"><a href="@routes.Assets.at("resources/pdf/speakerbeliefIPMU10.pdf")">Download PDF</a></li>
+        <li class="download"><a href="@routes.Assets.at("resources/pdf/speakerbeliefIPMU10.pdf")">Télécharger le PDF</a></li>
 
         <li>Petitrenaud S, <strong class="green">Jousse V</strong>, Meignier S, Estève Y .  <strong><em>Reconnaissance Automatique de Locuteurs à l'aide de Fonctions de Croyance.</em></strong> 17e congrès francophone Reconnaissance des Formes et Intelligence Artificielle (RFIA'10), Caen(France), 20-22 janvier 2010. Article court, 7 pages.</li>
-        <li class="download"><a href="@routes.Assets.at("resources/pdf/ident_locuteur_RFIA10.pdf")">Download PDF</a></li>
+        <li class="download"><a href="@routes.Assets.at("resources/pdf/ident_locuteur_RFIA10.pdf")">Télécharger le PDF</a></li>
 
         <li>Dufour R, <strong class="green">Jousse V</strong>, Estève Y, Béchet F, Linarès G .  <strong><em>Spontaneous Speech Characterization and Detection in Large Audio Database.</em></strong> 13-th International Conference on Speech and Computer (SPECOM 2009), St Petersburg(Russia), 21-25 june 2009. Article court, 6 pages.</li>
-        <li class="download"><a href="@routes.Assets.at("resources/pdf/EPAC_WP3_2008_01.pdf")">Download PDF</a></li>
+        <li class="download"><a href="@routes.Assets.at("resources/pdf/EPAC_WP3_2008_01.pdf")">Télécharger le PDF</a></li>
 
 
         <li><strong class="green">Jousse V</strong>, Petitrenaud S, Meignier S, Estève Y, Jacquin C .  <strong><em>Automatic named identification of speakers using diarization and ASR systems.</em></strong> ICASSP 2009, Taïpei(Taïwan), 19-24 april 2009. Article court, pp. 4557 - 4560</li>
-        <li class="download"><a href="@routes.Assets.at("resources/pdf/automatic-named-identification.pdf")">Download PDF</a></li>
+        <li class="download"><a href="@routes.Assets.at("resources/pdf/automatic-named-identification.pdf")">Télécharger le PDF</a></li>
 
 
         <li><strong class="green">Jousse V</strong>, Meignier S, Jacquin C, Petitrenaud S, Estève Y, Daille B .  <strong><em>Analyse conjointe du signal sonore et de sa transcription pour l'identification nommée de locuteur.</em></strong> In Traitement automatique des langues, 50(1), edited by ATALA,  2009. Article long, pp. 201-225</li>
-        <li class="download"><a href="@routes.Assets.at("resources/pdf/TAL-2009-50-1-08-Jousse.pdf")">Download PDF</a></li>
+        <li class="download"><a href="@routes.Assets.at("resources/pdf/TAL-2009-50-1-08-Jousse.pdf")">Télécharger le PDF</a></li>
 
 
         <li><strong class="green">Jousse V</strong>, Estève Y, Béchet F, Bazillon T, Linarès G .  <strong><em>Caractérisation et détection de parole spontanée dans de larges collections de documents audio.</em></strong> JEP/TALN 2008, Avignon(France), 9-13 juin 2008. Article court, 4 pages.</li>
-        <li class="download"><a href="@routes.Assets.at("resources/pdf/JOU08-sponta.pdf")">Download PDF</a></li>
+        <li class="download"><a href="@routes.Assets.at("resources/pdf/JOU08-sponta.pdf")">Télécharger le PDF</a></li>
 
 
         <li><strong class="green">Jousse V</strong>, Jacquin C, Meignier S, Estève Y, Daille B .  <strong><em>Etude pour l'amélioration d'un système d'identification nommée du locuteur.</em></strong> JEP/TALN 2008, Avignon(France), 9-13 juin 2008. Article court, 4 pages.</li>
-        <li class="download"><a href="@routes.Assets.at("resources/pdf/JOU08-spkid.pdf")">Download PDF</a></li>
+        <li class="download"><a href="@routes.Assets.at("resources/pdf/JOU08-spkid.pdf")">Télécharger le PDF</a></li>
 
 
         <li>Bazillon T, <strong class="green">Jousse V</strong>, Béchet F, Estève Y, Linarès G, Luzzati D .  <strong><em>La parole spontanée : transcription et traitement.</em></strong> In Traitement Automatique des Langues, 49(3), edited by ATALA : Association pour le Traitement Automatique des Langues,  200. Article long, pp. 47-76</li>
-        <li class="download"><a href="@routes.Assets.at("resources/pdf/Baz_TAL08.pdf")">Download PDF</a></li>
+        <li class="download"><a href="@routes.Assets.at("resources/pdf/Baz_TAL08.pdf")">Télécharger le PDF</a></li>
 
     </ul>
 </div>

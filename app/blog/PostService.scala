@@ -5,6 +5,7 @@ import Error.{unsafeValidation, unsafeOption}
 
 import java.util.Date
 import java.io.File
+import java.io.FilenameFilter
 import java.text.SimpleDateFormat
 
 import scala.io.Source
@@ -31,7 +32,15 @@ case class PostService(parser: Parser, directory: File) {
 
   def postList(): List[Post] = {
 
-    val files: List[File] = Option(directory.listFiles) map { _ toList } getOrElse (Nil)
+    //create a FilenameFilter and override its accept-method
+    val filefilter = new FilenameFilter() {
+      //only accept files ending by .md
+      def accept(dir: File, name: String) = name.endsWith(".md")
+    }
+
+    val files: List[File] = Option(directory.listFiles.filter(
+      file => (!file.isDirectory && file.getName().endsWith(".md"))
+    )) map { _ toList } getOrElse (Nil)
 
     (files.map { file ⇒
       postFromFile(file)

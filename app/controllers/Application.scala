@@ -12,7 +12,7 @@ object Application extends Controller {
       implicit request ⇒
         page match {
           case "index"    ⇒ Redirect(routes.Blog.list())
-          case "contact"  ⇒ Ok(contact())
+          case "about"    ⇒ Ok(about())
           case "cv"       ⇒ Ok(cv())
           case "research" ⇒ Ok(research())
           case _          ⇒ NotFound(views.html.error404())

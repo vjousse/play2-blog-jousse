@@ -56,7 +56,7 @@
 	html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,
 	blockquote,pre,address,code,del,dfn,em,img,q,
 	dl,dt,dd,ol,ul,li,
-	table,caption,tbody,tfoot,thead,tr,th,td,br,fieldset,textarea{font-family:'Droid Sans';font-size: 15px;line-height:1.7em;letter-spacing:.1px;
+	table,caption,tbody,tfoot,thead,tr,th,td,br,fieldset,textarea{font-family:'Droid Sans';font-size: 1em;line-height:1.7em;letter-spacing:.1px;
 	word-spacing:1px;margin:0;padding:0;border:0;vertical-align:baseline;}
 	h1,h2,h3,h4,h5,h6,hr,address,table,form{margin:0;float:left;}
 	p{width:auto;margin-top:20px;clear:both;}
@@ -65,7 +65,7 @@
 
 	/* ------ 2. General ------ */
 
-	body{background:url(../images/background.png) repeat;height:100%;height:auto;font-size:14px;color:#777;font-family:'Droid Sans';}
+	body{background:url(../images/background.png) repeat;height:100%;height:auto;font-size:1em;color:#777;font-family:'Droid Sans';}
 	h1,h2,h3,h4,h5,h6{letter-spacing:1px;}
 	a:link,a:visited,a:hover,a:active,a:focus{text-decoration:none;outline:none;}
 	a{color:#444;}
@@ -79,7 +79,12 @@
 
 	/* ------ 3. List Styles ------ */
 
-	ul,li{list-style:none;list-style-type:none;}
+	ul.none,li.none{list-style:none;list-style-type:none;}
+
+
+	ul li{list-style:circle;margin-left: 40px;}
+	ul {margin-top: 20px;}
+
 	ul.arrow_list,ul.arrow_list li,ul.check_list,ul.check_list li{margin-left:0;list-style:none;}
 	ol{float:left;}
 
@@ -89,10 +94,10 @@
 	/* ------ 4. Headers ------ */
 
 	h1,h2,h3,h4,h5,h6{width:100%;font-weight:normal;color:#444;line-height:100%;clear:both;}
-	h1{font-size:24px;font-weight:bold;}
-	h2{font-size:22px;margin: 25px 0 20px 0}
-	h3{font-size:18px;}
-	h4{font-size:16px;font-weight:bold;text-transform:uppercase;}
+	h1{font-size:1.6em;font-weight:bold;}
+	h2{font-size:1.5em;margin: 25px 0 20px 0}
+	h3{font-size:1.3em;}
+	h4{font-size:1.1em;font-weight:bold;text-transform:uppercase;}
 	h5{font-size:14px;font-weight:bold;text-transform:uppercase;margin:0px 0 10px 0px;}
 	h6{font-size:14px;font-weight:bold;margin:20px 0 10px 0px;}
 
@@ -106,16 +111,16 @@
 
 	/* ------ 2. Header ------ */
 
-	#logo{margin:40px 0 0 0;float:left;}
-	.default-logo a{background:transparent url(../images/vincent-jousse.png) no-repeat;width:185px;height:30px;float:left;}
-	.default-logo a:hover{background:url(../images/vincent-jousse-hover.png) no-repeat;float:left;}
+	#logo{margin:30px 0 0 0;float:left;font-weight:bold;font-size:1.8em}
+	#logo a { color:#777777; }
+	#logo a:hover { color:#a7ce44; }
 
 	/* ------ 3. Footer ------ */
 
 	#footer-wrapper{position:relative;width:940px;height:101px;float:left;}
 	#footer-wrapper ul{margin-top:40px;float:left;}
-		#footer-wrapper ul li{margin-right:50px;float: left;}
-	#footer-logo{background:url(../images/vincent-jousse.png) no-repeat;width:185px;height:30px;margin-top:30px;float:right;}
+		#footer-wrapper ul li{margin-right:50px;float: left;list-style:none}
+	#footer-logo{width:185px;height:30px;margin-top:30px;float:right;text-align:right;}
 	#footer-copyright{position:absolute;top:53px;right:0px;float:right;}
 	#footer-wrapper ul li a{text-decoration:none;color:#777;}
 		#footer-wrapper ul li a:hover{color:#444;}
@@ -202,7 +207,7 @@
 
 	/* ------ 1. Top Navigation ------ */
 
-	#nav-wrapper{width:700px;height:14px;font-size:14px;margin-top:48px;float:right;}
+	#nav-wrapper{width:500px;height:14px;margin-top:48px;float:right;}
 	#nav-wrapper .nav{height:14px;display:block;margin:0;padding:0;position:relative;float:right;}
 		#nav-wrapper .nav a{display:block;color:#777;margin-left:50px;line-height:1;}
 			#nav-wrapper .nav *:hover{color:#000}
@@ -235,7 +240,7 @@
 		background:#FFF;
 		border:1px solid #CCC;
 		padding:10px;
-		-moz-box-shadow: 0px 3px 3px #969696; /* for Firefox 3.5+ */
+		box-shadow: 0px 3px 3px #969696; /* for Firefox 3.5+ */
 	    -webkit-box-shadow: 0px 3px 3px #969696; /* for Safari and Chrome */
 	    filter: progid:DXImageTransform.Microsoft.Shadow(color='#969696', Direction=180, Strength=3);}
 	.slides_container{width:918px;height:300px;overflow:hidden;}
@@ -300,7 +305,7 @@
 
 	/* ------ 4. Blog Page ------*/
 
-	.blog-data{font-size:10px;color:#AAA;font-style:italic;text-transform:uppercase;float:left;}
+	.blog-data{font-size:0.8em;color:#AAA;font-style:italic;text-transform:uppercase;float:left;padding-top:10px;}
 	.blog-author{background:#F5F5F5;border:1px solid #CCC;padding:10px;float:left;}
 	.post h2 { padding-top: 30px; }
 
@@ -451,9 +456,9 @@
 		padding:5px 10px 6px 10px;
 		color:#FFF;
 		text-decoration:none;
-		-moz-border-radius:5px;
+		border-radius:5px;
 		-webkit-border-radius:5px;
-		-moz-box-shadow:0 1px 3px rgba(0,0,0,0.5);
+		box-shadow:0 1px 3px rgba(0,0,0,0.5);
 		-webkit-box-shadow:0 1px 3px rgba(0,0,0,0.5);
 		text-shadow:0 -1px 1px rgba(0,0,0,0.25);
 		border-bottom:1px solid rgba(0,0,0,0.25);
@@ -586,7 +591,7 @@
 		float:left;
 		padding:3px 10px 3px 10px;
 		margin-right:5px;
-		-moz-border-radius:10px;
+		border-radius:10px;
 		-webkit-border-radius:10px;
 		-khtml-border-radius:10px;
 		border-radius:10px;
@@ -605,9 +610,9 @@
 		font-size:10px;
 		color:#FFF;
 		text-decoration:none;
-		-moz-border-radius:5px;
+		border-radius:5px;
 		-webkit-border-radius:5px;
-		-moz-box-shadow:0 1px 3px rgba(0,0,0,0.5);
+		box-shadow:0 1px 3px rgba(0,0,0,0.5);
 		-webkit-box-shadow:0 1px 3px rgba(0,0,0,0.5);
 		text-shadow:0 -1px 1px rgba(0,0,0,0.25);
 		border-bottom:1px solid rgba(0,0,0,0.25);
