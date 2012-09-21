@@ -1,39 +1,18 @@
 @(posts: List[jousse.blog.Post])(implicit request: Request[AnyContent])
 
 @import jousse.util.Templating._
+@import tags.postHeader
 
 @main("Blog", "/index") {
 
-<!-- Content Start -->
-@for(p <- posts) {
+    <!-- Content Start -->
 
-<div class="full-width" style="margin-bottom: 0px; margin-top:50px;">
-    @if(!p.slug.isEmpty) {
-        <h1><a href="@jousse.controllers.routes.Blog.post(p.slug.get)">@p.title</a></h1>
-    } else {
-        <h1><a href="/not-found">@p.title</a></h1>
+    @for(post <- posts) {
+        @postHeader(post.title, post.createdAt, post.content, true, post.slug, post.description)
     }
-    <div class="blog-data">Posté le <span class="black">@formatDate(p.createdAt)</span> par <span class="black"><a href="http://twitter.com/vjousse">Vincent Jousse</a></span></div>
-</div>
 
-@if(!p.description.isEmpty) {
-<div class="full-width post" style="margin-top: 0px; margin-bottom:15px;">
-    <p>
-        @Html(p.description.get)
-    </p>
-</div>
-}
+    <div class="full-width"></div>
 
-<div class="medium button"><a href="@jousse.controllers.routes.Blog.post(p.slug.get)">Vite la suite !</a></div>
-}
-
-<div class="full-width">
-</div>
-
-<div class="one-fourth-last">
-
-</div>
-
-
+    <div class="one-fourth-last"></div>
 
 }

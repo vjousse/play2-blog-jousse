@@ -1,0 +1,29 @@
+@(title: String, createdAt: java.util.Date, content: String, link: Boolean = false, slug: Option[String] = None, description: Option[String] = None)
+
+@import jousse.util.Templating._
+
+<!-- Content Start -->
+<div class="full-width" style="margin-bottom: 0px; margin-top:50px;">
+    @if(!slug.isEmpty && link) {
+        <h1><a href="@jousse.controllers.routes.Blog.post(slug.get)">@title</a></h1>
+    } else {
+        <h1>@title</h1>
+    }
+    <div class="blog-data">Posté le <span class="black">@formatDate(createdAt)</span> par <span class="black"><a href="http://twitter.com/vjousse">Vincent Jousse</a></span></div>
+</div>
+
+@if(link) {
+    @if(!description.isEmpty) {
+    <div class="full-width post" style="margin-top: 0px; margin-bottom:15px;">
+        <p>
+            @Html(description.get)
+        </p>
+    </div>
+    }
+
+    <div class="medium button"><a href="@jousse.controllers.routes.Blog.post(slug.get)">Vite la suite !</a></div>
+} else {
+    <div class="full-width post" style="margin-top: 0px">
+        @Html(content)
+    </div>
+}

@@ -1,7 +1,7 @@
 @(post: jousse.blog.Post)
 
-@import tags.header
+@import tags.postHeader
 
 @main("Blog", "/index") {
-  @header(post.title, post.createdAt, post.content)
+  @postHeader(post.title, post.createdAt, post.content)
 }
