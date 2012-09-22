@@ -18,7 +18,7 @@ object Blog extends CustomController {
         Ok(blog.list(env.postService.postList()))
     }
 
-  def post(slug: String) = Action {
+  def post(slug: String, year: String, month: String) = Action {
       implicit request => env.postService.findPostBySlug(slug) match {
         case Some(p) => Ok(blog.post(p))
         case None => NotFound(views.html.error404())

@@ -5,7 +5,7 @@
 <!-- Content Start -->
 <div class="full-width" style="margin-bottom: 0px; margin-top:50px;">
     @if(!slug.isEmpty && link) {
-        <h1><a href="@jousse.controllers.routes.Blog.post(slug.get)">@title</a></h1>
+        <h1><a href="@jousse.controllers.routes.Blog.post(slug.get, getYear(createdAt), getMonth(createdAt))">@title</a></h1>
     } else {
         <h1>@title</h1>
     }
@@ -21,7 +21,7 @@
     </div>
     }
 
-    <div class="medium button"><a href="@jousse.controllers.routes.Blog.post(slug.get)">Vite la suite !</a></div>
+    <div class="medium button"><a href="@jousse.controllers.routes.Blog.post(slug.get, getYear(createdAt), getMonth(createdAt))">Vite la suite !</a></div>
 } else {
     <div class="full-width post" style="margin-top: 0px">
         @Html(content)

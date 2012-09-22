@@ -1,6 +1,5 @@
 title: "Comment réussir dans la vie : dompter l'échec"
-date: "2012-09-18"
-id:"comment-ne-pas-echouer"
+date: "2012-09-22"
 description: "_Ahhhh_ l'échec, la réussite, la chance, tant de notions qui nous font rêver et pleurer au quotidien. Certains semblent avoir plus de chance que d'autres et il semblerait même que __ça tombe toujours sur les mêmes__. Et si le _problème_ ne venait __pas des autres__, mais __de vous__ ?"
 ---
 

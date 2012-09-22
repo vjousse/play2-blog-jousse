@@ -8,9 +8,7 @@ GET     /                                  jousse.controllers.Blog.list()
 # Hardcoded URLs
 
 # Compatibility route
-GET     /blog/php-love-it-or-leave-it      jousse.controllers.Blog.post(slug = "2012-03-07-php-you-love-it-or-you-leave-it")
-
-GET     /blog/:slug                        jousse.controllers.Blog.post(slug)
+GET     /blog/:year/:month/:slug           jousse.controllers.Blog.post(slug, year, month)
 
 # Default pages
 GET     /:page                             jousse.controllers.Application.show(page)
