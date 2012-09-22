@@ -2,6 +2,6 @@
 
 @import tags.postHeader
 
-@main("Blog", "/index") {
+@main(post.title, "/index") {
   @postHeader(post.title, post.createdAt, post.content)
 }
