@@ -1,0 +1,278 @@
+/*
+* Skeleton V1.2
+* Copyright 2011, Dave Gamache
+* www.getskeleton.com
+* Free to use under the MIT license.
+* http://www.opensource.org/licenses/mit-license.php
+* 6/20/2012
+*/
+
+
+/* Table of Content
+==================================================
+	#Reset & Basics
+	#Basic Styles
+	#Site Styles
+	#Typography
+	#Links
+	#Lists
+	#Images
+	#Buttons
+	#Forms
+	#Misc */
+
+
+/* #Reset & Basics (Inspired by E. Meyers)
+================================================== */
+	html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+		margin: 0;
+		padding: 0;
+		border: 0;
+		font-size: 100%;
+		font: inherit;
+		vertical-align: baseline; }
+	article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+		display: block; }
+	body {
+		line-height: 1; }
+	ol, ul {
+		list-style: none; }
+	blockquote, q {
+		quotes: none; }
+	blockquote:before, blockquote:after,
+	q:before, q:after {
+		content: '';
+		content: none; }
+	table {
+		border-collapse: collapse;
+		border-spacing: 0; }
+
+
+/* #Basic Styles
+================================================== */
+body {
+    background:url(../images/background.png) repeat;
+    font-family: "Droid Sans", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 1em;
+    line-height: 1.7em;
+    color: #777;
+    -webkit-font-smoothing: antialiased; /* Fix for webkit rendering */
+    -webkit-text-size-adjust: 100%;
+    margin-top: 40px;
+}
+
+
+/* #Typography
+================================================== */
+	h1, h2, h3, h4, h5, h6 {
+		color: #444444;
+		font-family: "Droid Sans", "Georgia", "Times New Roman", serif;
+		font-weight: normal;
+	    letter-spacing: 1px;
+  }
+
+	h1,h2,h3,h4,h5,h6{width:100%;font-weight:normal;color:#444;line-height:100%;clear:both;}
+	h1{font-size:1.6em;font-weight:bold;}
+	h2{font-size:1.5em;margin: 45px 0 20px 0}
+	h3{font-size:1.3em;}
+	h4{font-size:1.1em;font-weight:bold;text-transform:uppercase;}
+	h5{font-size:14px;font-weight:bold;text-transform:uppercase;margin:0px 0 10px 0px;}
+	h6{font-size:14px;font-weight:bold;margin:20px 0 10px 0px;}
+	.subheader { color: #777; }
+
+	p { margin: 0 0 20px 0; letter-spacing: 0.1px; word-spacing: 1px; vertical-align: baseline; }
+	p img { margin: 0; }
+	p.lead { font-size: 21px; line-height: 27px; color: #777;  }
+
+	em { font-style: italic; }
+	strong { font-weight: bold;}
+	small { font-size: 80%; }
+
+/*	Blockquotes  */
+	blockquote, blockquote p { font-size: 17px; line-height: 24px; color: #777; font-style: italic; }
+	blockquote { margin: 0 0 20px; padding: 9px 20px 0 19px; border-left: 1px solid #ddd; }
+	blockquote cite { display: block; font-size: 12px; color: #555; }
+	blockquote cite:before { content: "\2014 \0020"; }
+	blockquote cite a, blockquote cite a:visited, blockquote cite a:visited { color: #555; }
+
+	hr { border: dotted #cccccc; border-width: 1px 0 0; clear: both; margin: 10px 0 30px; height: 0; }
+
+
+/* #Links
+================================================== */
+	a, a:visited { color: #333; text-decoration: underline; outline: 0; }
+	a:hover, a:focus { color: #000; }
+	p a, p a:visited { line-height: inherit; }
+	h1 a { text-decoration: none; }
+
+
+/* #Lists
+================================================== */
+	ul, ol { margin-bottom: 20px; }
+	ul { list-style: none outside;}
+	ul li{list-style:circle outside;margin-left: 40px;}
+
+	ol { list-style: decimal; }
+	ol, ul.square, ul.circle, ul.disc { margin-left: 30px; }
+	ul.square { list-style: square outside; }
+	ul.circle { list-style: circle outside; }
+	ul.disc { list-style: disc outside; }
+	ul ul, ul ol,
+	ol ol, ol ul { margin: 4px 0 5px 30px; font-size: 90%;  }
+	ul ul li, ul ol li,
+	ol ol li, ol ul li { margin-bottom: 6px; }
+	li { line-height: 18px; margin-bottom: 12px; }
+	ul.large li { line-height: 21px; }
+	li p { line-height: 1.7em; }
+
+/* #Images
+================================================== */
+
+	img.scale-with-grid {
+		max-width: 100%;
+		height: auto; }
+
+
+/* #Buttons
+================================================== */
+	/* ------ 7. Coloured Buttons ----- */
+	.button{
+		background:#222 url(../images/alert-overlay.png) repeat-x;
+		padding:5px 10px 6px 10px;
+		color:#FFF;
+		text-decoration:none;
+		border-radius:5px;
+		-webkit-border-radius:5px;
+		box-shadow:0 1px 3px rgba(0,0,0,0.5);
+		-webkit-box-shadow:0 1px 3px rgba(0,0,0,0.5);
+		text-shadow:0 -1px 1px rgba(0,0,0,0.25);
+		border-bottom:1px solid rgba(0,0,0,0.25);
+		cursor:pointer;
+		float:right;
+		margin-top:10px;
+		display:inline;}
+
+    .button a{
+        color:#FFF;
+        text-decoration: none;
+    }
+
+	/* Sizes */
+	.small.button,.small.button:visited{font-size:10px;}
+	.button,.button:visited,.medium.button,.medium.button:visited{
+		font-size:13px;
+		font-weight:bold;
+		line-height:1;
+		text-shadow:0 -1px 1px rgba(0,0,0,0.25);}
+	.large.button,.large.button:visited{font-size:14px;padding:8px 14px 9px;}
+
+	/* Colours */
+	.button:hover{background-color:#111;color:#fff;}
+	.button:active{top:1px;}
+	.green.button,.green.button:visited{background-color:#A7CE44;}
+	.green.button:hover{background-color:#78952D;}
+	.blue.button,.blue.button:visited{background-color:#59A0DC;}
+	.blue.button:hover{background-color:#377AB3;}
+	.red.button,.red.button:visited{background-color:#CE4444;}
+	.red.button:hover{background-color:#A33636;}
+	.magenta.button,.magenta.button:visited{background-color:#a9014b;}
+	.magenta.button:hover{background-color:#630030;}
+	.orange.button,.orange.button:visited{background-color:#ff5c00;}
+	.orange.button:hover{background-color:#d45500;}
+	.yellow.button,.yellow.button:visited{background-color:#CABF42;}
+	.yellow.button:hover{background-color:#A29826;}
+
+	/* Button Previews */
+	.button-styles{margin-right:20px;float:left;}
+	.button-styles li{margin-top:10px;}
+
+	/* Fix for odd Mozilla border & padding issues */
+	button::-moz-focus-inner,
+	input::-moz-focus-inner {
+    border: 0;
+    padding: 0;
+	}
+
+
+/* #Forms
+================================================== */
+
+	form {
+		margin-bottom: 20px; }
+	fieldset {
+		margin-bottom: 20px; }
+	input[type="text"],
+	input[type="password"],
+	input[type="email"],
+	textarea,
+	select {
+		border: 1px solid #ccc;
+		padding: 6px 4px;
+		outline: none;
+		-moz-border-radius: 2px;
+		-webkit-border-radius: 2px;
+		border-radius: 2px;
+		font: 13px "Droid Sans", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+		color: #777;
+		margin: 0;
+		width: 210px;
+		max-width: 100%;
+		display: block;
+		margin-bottom: 20px;
+		background: #fff; }
+	select {
+		padding: 0; }
+	input[type="text"]:focus,
+	input[type="password"]:focus,
+	input[type="email"]:focus,
+	textarea:focus {
+		border: 1px solid #aaa;
+ 		color: #444;
+ 		-moz-box-shadow: 0 0 3px rgba(0,0,0,.2);
+		-webkit-box-shadow: 0 0 3px rgba(0,0,0,.2);
+		box-shadow:  0 0 3px rgba(0,0,0,.2); }
+	textarea {
+		min-height: 60px; }
+	label,
+	legend {
+		display: block;
+		font-weight: bold;
+		font-size: 13px;  }
+	select {
+		width: 220px; }
+	input[type="checkbox"] {
+		display: inline; }
+	label span,
+	legend span {
+		font-weight: normal;
+		font-size: 13px;
+		color: #444; }
+
+/* #Misc
+================================================== */
+	.remove-bottom { margin-bottom: 0 !important; }
+	.half-bottom { margin-bottom: 10px !important; }
+	.add-bottom { margin-bottom: 20px !important; }
+
+
+/* #Specific styles
+================================================== */
+#logo{font-weight:bold;font-size:1.8em;}
+#logo a { color:#777777; text-decoration: none;}
+#logo a:hover { color:#a7ce44; }
+
+/* ------ 1. Top Navigation ------ */
+
+#header-nav .nav{position:absolute;right:10px;top:10px;}
+.nav{margin:0;padding:0;}
+.nav a{color:#777;margin-left:50px;line-height:1; text-decoration: none;}
+.nav *:hover{color:#000}
+.nav li{display:inline;list-style:none;margin:0;padding:0;}
+.nav li.current a{color:#000;}
+
+.blog-data{font-size:0.9em;color:#AAA;font-style:italic;text-transform:uppercase;padding:15px 0 15px 0;}
+
+#footer-copyright{ text-align: right;}
+#footer-nav ul{display: inline;}
+#footer-nav li{text-align: left;}
+#footer-nav li a{margin-left: 0; margin-right:50px;}

@@ -1,46 +1,60 @@
 @(title: String, parent: String = "/", slogan: Html = Html(""))(content: Html)
 @import tags.menu
 <!DOCTYPE html>
-<html>
+<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html lang="en"> <!--<![endif]-->
 <head>
-  <title>@title</title>
-  <meta charset="UTF-8" />
-  <link href='http://fonts.googleapis.com/css?family=Droid+Sans:regular,bold' rel='stylesheet' type='text/css'>
-  <link href="@routes.Assets.at("stylesheets/build.css")" rel="stylesheet">
+    <meta charset="utf-8">
+    <title>@title</title>
+    <meta name="description" content="Vivre sa vie, réussir sa vie">
+    <meta name="author" content="Vincent Jousse">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="@routes.Assets.at("stylesheets/base.css")">
+    <link rel="stylesheet" href="@routes.Assets.at("stylesheets/skeleton.css")">
+    <link rel="stylesheet" href="@routes.Assets.at("stylesheets/layout.css")">
+    <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
 </head>
 <body>
-    <!-- Page Wrapper Start -->
-    <div id="page-wrapper">
-        <!-- Logo Start -->
-        <div id="logo">
-            <a href="/">Vivre sa vie</a>
+
+    <div class="container">
+        <div class="sixteen columns clearfix">
+            <div class="row">
+                <div id="logo" class="six columns alpha">
+                    <a href="/">Vivre sa vie</a>
+                </div>
+                <div class="ten columns omega" id="header-nav">
+                    @menu(parent)
+                </div>
+            </div>
+            <hr />
         </div>
-        <!-- Logo End -->
 
-        <!-- Navigation Start -->
-        <div id="nav-wrapper">
-            @menu(parent)
+        <div class="sixteen columns clearfix">
+            @content
         </div>
-        <!-- Navigation End -->
 
-        <div class="horizontal-rule"></div>
-
-       <!-- Content Start -->
-        @content
-        <!-- Content End -->
-
-        <div class="horizontal-rule"></div>
-
-        <!-- Footer Start -->
-        <div id="footer-wrapper">
-            @menu(parent)
-            <div id="footer-logo"><a href="/">Vivre sa vie</a></div>
-            <div id="footer-copyright">License: <a href="http://creativecommons.org/licenses/by-nc-sa/2.0/">Creative Commons by-nc-sa</a></div>
+        <div class="sixteen columns clearfix">
+            <hr />
+            <div class="row">
+                <div id="footer-nav" class="ten columns omega">
+                    <ul class="nav">
+                        <li ><a href="/index/">Articles</a></li>
+                        <li ><a href="/about/">&Agrave; propos</a></li>
+                    </ul>
+                </div>
+                <div id="footer-copyright" class="six columns alpha">
+                    License&nbsp;:
+                    <a href="http://creativecommons.org/licenses/by-nc-sa/2.0/">Creative Commons by-nc-sa</a>
+                </div>
+            </div>
         </div>
-        <!-- Footer End -->
 
     </div>
-    <!-- Page Wrapper End -->
+
 <script type="text/javascript">
   var _gaq = _gaq || [];
   _gaq.push(['_setAccount', 'UA-25989146-1']);
@@ -52,6 +66,5 @@
     var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
   })();
 </script>
-<a href="http://github.com/vjousse/play2-blog-jousse"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://a248.e.akamai.net/camo.github.com/71eeaab9d563c2b3c590319b398dd35683265e85/687474703a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f677261795f3664366436642e706e67" alt="Fork me on GitHub"></a>
 </body>
 </html>
