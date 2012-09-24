@@ -263,9 +263,9 @@ body {
 
 /* ------ 1. Top Navigation ------ */
 
-#header-nav .nav{position:absolute;right:10px;top:10px;}
+#header-nav .nav{position:relative;right:10px;top:10px;text-align: right;}
 .nav{margin:0;padding:0;}
-.nav a{color:#777;margin-left:50px;line-height:1; text-decoration: none;}
+.nav a{color:#777;margin-left:40px;line-height:1; text-decoration: none;}
 .nav *:hover{color:#000}
 .nav li{display:inline;list-style:none;margin:0;padding:0;}
 .nav li.current a{color:#000;}
