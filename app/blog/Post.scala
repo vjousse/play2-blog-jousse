@@ -8,7 +8,7 @@ import java.util.Date
 case class Post(title: String, content: String, createdAt: Date, description: Option[String] = None, slug: Option[String] = None, id: Option[String] = None) extends Ordered[Date] {
 
   def compare(that: Date): Int = {
-    createdAt.compare(that)
+    createdAt.compareTo(that)
   }
 
   def uniqueId: String = id match {

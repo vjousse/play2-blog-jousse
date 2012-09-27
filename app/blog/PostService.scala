@@ -9,6 +9,7 @@ import java.io.FilenameFilter
 import java.text.SimpleDateFormat
 
 import scala.io.Source
+import scala.util.Sorting
 import scala.collection.JavaConversions._
 
 import com.typesafe.config.{ Config, ConfigFactory }
@@ -46,7 +47,7 @@ case class PostService(parser: Parser, directory: File) {
       postFromFile(file)
     }).map { postValidation ⇒
       postValidation.toOption
-    }.flatten.reverse
+    }.flatten.sortWith((p1, p2) => p1.createdAt.compareTo(p2.createdAt) > 0)
 
   }
 
