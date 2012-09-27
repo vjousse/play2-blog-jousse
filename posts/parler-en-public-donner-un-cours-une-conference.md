@@ -1,5 +1,5 @@
 title: "Comment parler en public : donner un cours ou une conférence"
-date: "2012-09-24"
+date: "2012-09-27"
 description: "Parler en public est __effrayant__ pour beaucoup de personnes ; cela peut même devenir insurmontable. J'ai été moi même confronté à cette problématique : comment faire pour ne plus avoir peur de parler en public, voire même __d'apprécier parler en public__. Nous allons voir ici quelques astuces pour la fameuse _« Présentation PowerPoint »_ (même si la plupart des conseils restent valable pour nombre de prises de parole en public). Ayant été moi même prof à la FAC et ayant donné des conférences sur mes sujets de recherche universitaire, j'ai appris à gérer __des groupes allant de 10 à 300 personnes__. Voici quelques conseils pour vous aider à faire de même."
 ---
 
