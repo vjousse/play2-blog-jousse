@@ -259,7 +259,7 @@ body {
 	.add-bottom { margin-bottom: 20px !important; }
 
 
-/* #Specific styles
+/* #Specific REDUCTO styles
 ================================================== */
 #logo{font-weight:bold;font-size:1.8em;}
 #logo a { color:#777777; text-decoration: none;}
@@ -280,3 +280,31 @@ body {
 #footer-nav ul{display: inline;}
 #footer-nav li{text-align: left;}
 #footer-nav li a{margin-left: 0; margin-right:50px;}
+
+
+
+/* Testimonials */
+#testimonials-body{
+    padding-top: 30px;
+    background: white;
+    position:relative;
+    float:left;
+    border: 1px solid #dddddd;
+    margin: 30px 15% 50px 15%;
+}
+#testimonials-speech-top{
+    background:url(../images/testimonials-speech-top.png) no-repeat;
+    width:36px;
+    height:28px;
+    position:absolute;
+    top:0px;
+    left:-1px;
+}
+#testimonials-speech-bottom{
+    background:url(../images/testimonials-speech-bottom.png) no-repeat;
+    position:absolute;
+    bottom:0px;
+    right:-1px;
+    width:36px;
+    height:28px; }
+#testimonial{padding:10px;height:100%;}
