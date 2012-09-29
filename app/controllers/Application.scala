@@ -13,6 +13,7 @@ object Application extends Controller {
         page match {
           case "index"    ⇒ Redirect(routes.Blog.list())
           case "about"    ⇒ Ok(about())
+          case "contact"  ⇒ Ok(contact())
           case "cv"       ⇒ Ok(cv())
           case "research" ⇒ Ok(research())
           case _          ⇒ NotFound(views.html.error404())

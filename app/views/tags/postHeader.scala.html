@@ -11,10 +11,14 @@
 
 @if(link) {
 @if(!description.isEmpty) {
-@Html(description.get)
+<div class="blog-description">
+    <a href="@jousse.controllers.routes.Blog.post(slug.get, getYear(createdAt), getMonth(createdAt))">
+        @Html(description.get)
+    </a>
+</div>
 }
 
-<div class="button next"><a href="@jousse.controllers.routes.Blog.post(slug.get, getYear(createdAt), getMonth(createdAt))">Vite la suite !</a></div>
+<div class="button next"><a href="@jousse.controllers.routes.Blog.post(slug.get, getYear(createdAt), getMonth(createdAt))">Lire la suite »</a></div>
 } else {
 @Html(content)
 }

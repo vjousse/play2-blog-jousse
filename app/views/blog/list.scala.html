@@ -4,15 +4,7 @@
 @import tags.postHeader
 
 @main("Vivre sa vie", "/index") {
-
-    <!-- Content Start -->
-
     @for(post <- posts) {
         @postHeader(post.title, post.createdAt, post.content, true, post.slug, post.description)
     }
-
-    <div class="full-width"></div>
-
-    <div class="one-fourth-last"></div>
-
 }

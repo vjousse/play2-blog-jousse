@@ -1,6 +1,6 @@
-@(parent: String, pages: List[(String, String)] = List(("Articles", "index"), ("À propos","about")))
+@(parent: String, pages: List[(String, String)] = List(("Articles", "index"), ("À propos","about"), ("Contact","contact")))
 
-@current(route: String) = { @{if(parent == route || (parent.startsWith(route) && route != "/")) "class='current'" }}
+@current(route: String) = { @{if(parent == route || (parent + "/") == route || (parent.startsWith(route) && route != "/")) "class='current'" }}
 
 <ul class="nav">
     @for((name,route) <- pages) {

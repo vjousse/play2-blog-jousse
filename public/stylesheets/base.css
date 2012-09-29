@@ -275,6 +275,7 @@ body {
 .nav li.current a{color:#000;}
 
 .blog-data{font-size:0.9em;color:#AAA;font-style:italic;text-transform:uppercase;padding:15px 0 15px 0;}
+.blog-description a{color:#777777; text-decoration: none;}
 
 #footer-copyright{ text-align: right;}
 #footer-nav ul{display: inline;}
