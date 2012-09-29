@@ -14,7 +14,7 @@
 @Html(description.get)
 }
 
-<div class="medium button"><a href="@jousse.controllers.routes.Blog.post(slug.get, getYear(createdAt), getMonth(createdAt))">Vite la suite !</a></div>
+<div class="button next"><a href="@jousse.controllers.routes.Blog.post(slug.get, getYear(createdAt), getMonth(createdAt))">Vite la suite !</a></div>
 } else {
 @Html(content)
 }

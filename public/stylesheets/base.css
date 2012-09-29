@@ -157,6 +157,10 @@ body {
         text-decoration: none;
     }
 
+    .next {
+        margin-bottom: 20px;
+    }
+
 	/* Sizes */
 	.small.button,.small.button:visited{font-size:10px;}
 	.button,.button:visited,.medium.button,.medium.button:visited{
