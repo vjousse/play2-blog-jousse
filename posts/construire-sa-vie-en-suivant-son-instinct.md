@@ -1,6 +1,6 @@
 title: "Construire sa vie en suivant son instinct"
-date: "2012-09-27"
-description: ""
+date: "2012-10-01"
+description: "Il y a de ça 13 ans (que le temps passe vite !), je sortais d'un BAC Scientifique avec le choix entre une école prépa Math, ou un DUT informatique. J'ai __choisi à l'instinct__ et ça a été le premier choix qui m'a vraiment fait entrer dans « ma vie ». Si vous suivez votre instinct (ou que vous lui permettez au moins de s'exprimer) la seule chose que vous pourrez « regretter » _a posteriori_, c'est de __ne pas l'avoir suivi plus tôt__. Voici quelques conseils et mon expérience personnelle pour vous permettre de __construire votre propre vie__."
 ---
 
 Il y a de ça 13 ans (que le temps passe vite !), je sortais d'un BAC Scientifique avec le choix entre une école prépa Math, ou un DUT informatique. J'ai __choisi à l'instinct__ et ça a été le premier choix qui m'a vraiment fait entrer dans « ma vie ». Si vous suivez votre instinct (ou que vous lui permettez au moins de s'exprimer) la seule chose que vous pourrez « regretter » _a posteriori_, c'est de __ne pas l'avoir suivi plus tôt__. Voici quelques conseils et mon expérience personnelle pour vous permettre de __construire votre propre vie__.
