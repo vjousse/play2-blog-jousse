@@ -4,11 +4,12 @@
 
 # Blog pages
 GET     /                                  jousse.controllers.Blog.list()
+GET     /rss.xml                           jousse.controllers.Blog.rss()
 
-GET     /blog/:year/:month/:slug/           jousse.controllers.Blog.post(slug, year, month)
+GET     /blog/:year/:month/:slug/          jousse.controllers.Blog.post(slug, year, month)
 
 # Default pages
-GET     /:page/                             jousse.controllers.Application.show(page)
+GET     /:page/                            jousse.controllers.Application.show(page)
 
 # Map static resources from the /public folder to the /assets URL path
 GET     /static/*file                      controllers.Assets.at(path="/public", file)

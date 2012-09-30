@@ -1,0 +1,18 @@
+@(posts: List[jousse.blog.Post])@import jousse.util.Templating._
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0">
+    <channel>
+        <title>Vivre sa vie</title>
+        <description>Développement personnel et expériences de vie.</description>
+        <lastBuildDate>Sat, 07 Sep 2002 00:00:01 GMT</lastBuildDate>
+        <link>http://www.example.org</link>
+        @for(post <- posts) {
+        <item>
+            <title>@post.title</title>
+            <description>@Html(post.rawDescription.getOrElse("").replaceAll("_",""))</description>
+            <pubDate>Sat, 07 Sep 2002 00:00:01 GMT</pubDate>
+            <link>http://vincent.jousse.org@jousse.controllers.routes.Blog.post(post.slug.get, getYear(post.createdAt), getMonth(post.createdAt))</link>
+        </item>
+        }
+    </channel>
+</rss>

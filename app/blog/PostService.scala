@@ -61,6 +61,7 @@ case class PostService(parser: Parser, directory: File) {
       parser.parse(content.tail.mkString("\n")),
       formatter.parse(conf.getString("date")),
       unsafeOption(conf.getString("description")) map parser.parse,
+      unsafeOption(conf.getString("description")),
       slug,
       unsafeOption(conf.getString("id")))
   }

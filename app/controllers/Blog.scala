@@ -18,6 +18,11 @@ object Blog extends CustomController {
         Ok(blog.list(env.postService.postList()))
     }
 
+  def rss() = Action {
+      implicit request =>
+        Ok(blog.rss(env.postService.postList())).as("text/xml")
+    }
+
   def post(slug: String, year: String, month: String) = Action {
       implicit request => env.postService.findPostBySlug(slug) match {
         case Some(p) => Ok(blog.post(p))
