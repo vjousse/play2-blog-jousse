@@ -6,5 +6,6 @@
 @main("Vivre sa vie", "/index") {
     @for(post <- posts) {
         @postHeader(post.title, post.createdAt, post.content, true, post.slug, post.description)
+        <hr />
     }
 }
