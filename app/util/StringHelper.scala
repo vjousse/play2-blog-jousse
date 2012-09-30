@@ -29,6 +29,8 @@ trait StringHelper {
 
   def getMonth(date: Time) = date format "MM"
 
+  def rssDate(date: Time) = date format "E, dd MMM yyyy HH:mm:ss Z"
+
   def formatDistance(date: Date) = fuzzyFormatter formatDistance date
 
   private val fuzzyFormatter = FuzzyDateFormat.getInstance

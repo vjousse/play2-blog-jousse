@@ -4,15 +4,14 @@
     <channel>
         <title>Vivre sa vie</title>
         <description>Développement personnel et expériences de vie.</description>
-        <lastBuildDate>Sat, 07 Sep 2002 00:00:01 GMT</lastBuildDate>
-        <link>http://www.example.org</link>
+        <lastBuildDate>@rssDate(posts.head.createdAt)</lastBuildDate>
+        <link>http://vincent.jousse.org</link>
         @for(post <- posts) {
         <item>
-            <title>@post.title</title>
+            <title>@Html(post.title)</title>
             <description>@Html(post.rawDescription.getOrElse("").replaceAll("_",""))</description>
-            <pubDate>Sat, 07 Sep 2002 00:00:01 GMT</pubDate>
+            <pubDate>@rssDate(post.createdAt)</pubDate>
             <link>http://vincent.jousse.org@jousse.controllers.routes.Blog.post(post.slug.get, getYear(post.createdAt), getMonth(post.createdAt))</link>
-        </item>
-        }
+        </item>}
     </channel>
 </rss>

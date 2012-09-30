@@ -4,7 +4,7 @@
 
 # Blog pages
 GET     /                                  jousse.controllers.Blog.list()
-GET     /rss.xml                           jousse.controllers.Blog.rss()
+GET     /blog.rss                          jousse.controllers.Blog.rss()
 
 GET     /blog/:year/:month/:slug/          jousse.controllers.Blog.post(slug, year, month)
 
