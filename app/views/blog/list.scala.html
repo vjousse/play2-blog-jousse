@@ -3,7 +3,7 @@
 @import jousse.util.Templating._
 @import tags.postHeader
 
-@main("Vivre sa vie", "/index") {
+@main("Expériences de vie", "/index") {
     @for(post <- posts) {
         @postHeader(post.title, post.createdAt, post.content, true, post.slug, post.description)
         <hr />
