@@ -4,6 +4,9 @@ package blog
 import scala.io.Source
 import java.io.File
 import play.api.libs.ws.WS
+import play.api.libs.concurrent.Execution.Implicits._
+import scala.concurrent._
+import scala.concurrent.duration._
 
 case class RemoteParser(remoteParserUrl: String) extends Parser {
 
@@ -11,7 +14,7 @@ case class RemoteParser(remoteParserUrl: String) extends Parser {
     val promise = WS.url(remoteParserUrl).post(content).map { response =>
       response.body
     }
-    return promise.await.get
+    return Await.result(promise, 0 nanos)
   }
 
   def parseMd(file: File): String = {
