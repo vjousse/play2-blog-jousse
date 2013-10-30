@@ -15,10 +15,10 @@ import scala.collection.JavaConversions._
 import com.typesafe.config.{ Config, ConfigFactory }
 import scalaz.{Validation, Failure}
 
-case class PostService(parser: Parser, directory: File) {
+case class PostService(parser: Parser, directory: Option[File] = None) {
 
-  def findPostBySlug(slug: String): Option[Post] = {
-    val file = new File(directory, slug + ".md")
+  def findPostBySlug(slug: String): Option[Post] = directory.flatMap { d =>
+    val file = new File(d, slug + ".md")
     if (file.exists) {
       postFromFile(file).toOption
     } else {
@@ -39,7 +39,8 @@ case class PostService(parser: Parser, directory: File) {
       def accept(dir: File, name: String) = name.endsWith(".md")
     }
 
-    val files: List[File] = Option(directory.listFiles.filter(
+    val files: List[File] = directory.map(d =>
+        d.listFiles.filter(
       file => (!file.isDirectory && file.getName().endsWith(".md"))
     )) map { _ toList } getOrElse (Nil)
 
