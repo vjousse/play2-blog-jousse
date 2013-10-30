@@ -17,7 +17,7 @@ class PostSpec extends Specification with ScalazValidationMatchers {
 
   val postHeaders = """
 title: New Test title
-date: "02-05-2012"
+date: "2012-05-02"
 ---
 """
   val postContent = """
@@ -38,10 +38,9 @@ And _some_ random *content*.
       post must beSuccess
     }
 
-
     "extract all informations" in {
-      val formatter = new SimpleDateFormat("dd-MM-yyyy");
-      post must succeedWith(Post("New Test title", postContent, formatter.parse("02-05-2012")))
+      val formatter = new SimpleDateFormat("yyyy-MM-dd");
+      post must succeedWith(Post("New Test title", postContent, formatter.parse("2012-05-02")))
     }
 
   }
