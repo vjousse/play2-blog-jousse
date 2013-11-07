@@ -5,6 +5,6 @@
 <ul class="nav">
     <li><a href="@jousse.controllers.routes.Blog.rss()"><img src="@routes.Assets.at("images/rss.png")" /></a></li>
     @for((name,route) <- pages) {
-    <li@current(jousse.controllers.routes.Application.show(route) toString)><a href="@jousse.controllers.routes.Application.show(route)">@name</a></li>
+    <li@current(jousse.controllers.routes.Application.show(route).toString)><a href="@jousse.controllers.routes.Application.show(route)">@name</a></li>
     }
 </ul>

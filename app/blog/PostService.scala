@@ -42,7 +42,7 @@ case class PostService(parser: Parser, directory: Option[File] = None) {
     val files: List[File] = directory.map(d =>
         d.listFiles.filter(
       file => (!file.isDirectory && file.getName().endsWith(".md"))
-    )) map { _ toList } getOrElse (Nil)
+    )) map { _.toList } getOrElse (Nil)
 
     (files.map { file ⇒
       postFromFile(file)

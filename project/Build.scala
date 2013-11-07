@@ -14,6 +14,7 @@ object ApplicationBuild extends Build {
     )
 
     val main = play.Project(appName, appVersion, appDependencies).settings(
+      scalacOptions ++= Seq("-unchecked", "-deprecation", "-feature"),
       resolvers ++= Seq(
         "twitter.com" at "http://maven.twttr.com/",
         "sonatype" at "http://oss.sonatype.org/content/repositories/releases",

@@ -1,6 +1,7 @@
 package jousse
 package util
 
+import scala.language.implicitConversions
 import com.twitter.util.Time
 import java.util.Date
 

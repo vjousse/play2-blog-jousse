@@ -12,7 +12,7 @@ object Error {
   def unsafeOption[A](op: => A): Option[A] = try {
     Some(op)
   } catch {
-    case exception => None
+    case exception: Throwable => None
   }
 
   def unsafeValidation[A](op: => A): Validation[Exception,A] = try {

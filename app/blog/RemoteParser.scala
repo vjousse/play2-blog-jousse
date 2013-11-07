@@ -14,7 +14,7 @@ case class RemoteParser(remoteParserUrl: String) extends Parser {
     val promise = WS.url(remoteParserUrl).post(content).map { response =>
       response.body
     }
-    return Await.result(promise, 0 nanos)
+    return Await.result(promise, 0.nanos)
   }
 
   def parseMd(file: File): String = {

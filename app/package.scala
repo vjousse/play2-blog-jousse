@@ -1,4 +1,5 @@
 import jousse.util.Conversions
+import scala.language.implicitConversions
 
 package object jousse
   extends Conversions {
