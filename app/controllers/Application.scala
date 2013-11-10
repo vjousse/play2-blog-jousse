@@ -11,7 +11,7 @@ object Application extends Controller {
     Action {
       implicit request ⇒
         page match {
-          case "index"    ⇒ Redirect(routes.Blog.list())
+          case "index"    ⇒ Ok(views.html.index())
           case "about"    ⇒ Ok(about())
           case "contact"  ⇒ Ok(contact())
           case "cv"       ⇒ Ok(cv())
@@ -20,5 +20,6 @@ object Application extends Controller {
         }
     }
   }
+  def index() = Action { Ok(views.html.index()) }
 
 }
