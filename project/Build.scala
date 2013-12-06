@@ -10,6 +10,7 @@ object ApplicationBuild extends Build {
     val appDependencies = Seq(
       "org.scalaz" %% "scalaz-core" % "6.0.4",
       "com.twitter" % "util-core" % "1.12.4",
+      "org.pegdown" % "pegdown" % "1.4.1",
       "eu.henkelmann" % "actuarius_2.10.0" % "0.2.6"
     )
 
