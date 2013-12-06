@@ -3,22 +3,22 @@
 @import jousse.util.Templating._
 
 @if(!slug.isEmpty && link) {
-    <h1><a href="@jousse.controllers.routes.Blog.post(slug.get, getYear(createdAt), getMonth(createdAt))">@title</a></h1>
+    <h1><a href="@jousse.controllers.routes.Blog.post(slug.get)">@title</a></h1>
 } else {
     <h1>@title</h1>
 }
 <div class="blog-data">Posté le <span class="black">@formatDate(createdAt)</span> par <span class="black"><a href="http://twitter.com/vjousse">Vincent Jousse</a></span></div>
 
 @if(link) {
-@if(!description.isEmpty) {
-<div class="blog-description">
-    <a href="@jousse.controllers.routes.Blog.post(slug.get, getYear(createdAt), getMonth(createdAt))">
-        @Html(description.get)
-    </a>
-</div>
-}
+    @if(!description.isEmpty) {
+        <div class="blog-description">
+            <a href="@jousse.controllers.routes.Blog.post(slug.get)">
+                @Html(description.get)
+            </a>
+        </div>
+    }
 
-<div class="button next"><a href="@jousse.controllers.routes.Blog.post(slug.get, getYear(createdAt), getMonth(createdAt))">Lire la suite »</a></div>
+    <div class="button next"><a href="@jousse.controllers.routes.Blog.post(slug.get)">Lire la suite »</a></div>
 } else {
 @Html(content)
 }

@@ -1,10 +1,13 @@
-@(parent: String, pages: List[(String, String)] = List(("Ideas", "ideas"), ("Code","code"), ("Research","research"), ("Open source","open-source"), ("About","about")))
+@(parent: String, pages: List[(String, String)] = List(("Tech blog","tech"), ("Research","research"), ("Github", "http://github.com/vjousse"), ("About","about")))
 
 @current(route: String) = { @{if(parent == route || (parent + "/") == route || (parent.startsWith(route) && route != "/")) "class='current'" }}
 
 <ul class="nav navbar-nav">
     @for((name,route) <- pages) {
-    <li@current(jousse.controllers.routes.Application.show(route).toString)><a href="@jousse.controllers.routes.Application.show(route)">@name</a></li>
+        @if(!route.startsWith("http")) {
+            <li@current(jousse.controllers.routes.Application.show(route).toString)><a href="@jousse.controllers.routes.Application.show(route)">@name</a></li>
+        } else {
+            <li><a href="@route">@name</a></li>
+        }
     }
-    <li><a href="@jousse.controllers.routes.Blog.rss()"><img src="@routes.Assets.at("images/rss.png")" /></a></li>
 </ul>

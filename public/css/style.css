@@ -8,3 +8,8 @@ body h1, body .h1 {
     font-size: 50px;
     padding-bottom: 20px;
 }
+
+.post-data {
+    font-style: italic;
+    padding-bottom: 10px;
+}

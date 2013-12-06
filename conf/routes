@@ -4,9 +4,10 @@
 
 # Blog pages
 GET     /                                  jousse.controllers.Application.index()
+GET     /tech/                             jousse.controllers.Blog.tech()
 GET     /blog.rss                          jousse.controllers.Blog.rss()
 
-GET     /blog/:year/:month/:slug/          jousse.controllers.Blog.post(slug, year, month)
+GET     /tech/:slug/                       jousse.controllers.Blog.post(slug)
 
 # Default pages
 GET     /:page/                            jousse.controllers.Application.show(page)

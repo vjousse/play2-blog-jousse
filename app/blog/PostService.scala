@@ -15,9 +15,9 @@ import scala.collection.JavaConversions._
 import com.typesafe.config.{ Config, ConfigFactory }
 import scalaz.{Validation, Failure}
 
-case class PostService(parser: Parser, directory: Option[File] = None) {
+case class PostService(parser: Parser) {
 
-  def findPostBySlug(slug: String): Option[Post] = directory.flatMap { d =>
+  def findPostBySlug(slug: String, directory: Option[File] = None): Option[Post] = directory.flatMap { d =>
     val file = new File(d, slug + ".md")
     if (file.exists) {
       postFromFile(file).toOption
@@ -31,7 +31,7 @@ case class PostService(parser: Parser, directory: Option[File] = None) {
         unsafeOption(file.getName.substring(0,file.getName.lastIndexOf('.'))))
   }
 
-  def postList(): List[Post] = {
+  def postList(directory: Option[File] = None): List[Post] = {
 
     //create a FilenameFilter and override its accept-method
     val filefilter = new FilenameFilter() {

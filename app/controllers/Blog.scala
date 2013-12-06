@@ -13,18 +13,18 @@ import views.html._
 
 object Blog extends CustomController {
 
-  def list() = Action {
-      implicit request =>
-        Ok(blog.list(env.postService.postList()))
-    }
-
   def rss() = Action {
       implicit request =>
         Ok(blog.rss(env.postService.postList())).as("application/rss+xml")
     }
 
-  def post(slug: String, year: String, month: String) = Action {
-      implicit request => env.postService.findPostBySlug(slug) match {
+  def tech() = Action {
+      implicit request =>
+        Ok(blog.list(env.postService.postList(Some(env.techPostsDirectory))))
+    }
+
+  def post(slug: String) = Action {
+      implicit request => env.postService.findPostBySlug(slug, Some(env.techPostsDirectory)) match {
         case Some(p) => Ok(blog.post(p))
         case None => NotFound(views.html.error404())
       }

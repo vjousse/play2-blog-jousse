@@ -11,7 +11,7 @@
             <title>@Html(post.title)</title>
             <description>@Html(post.rawDescription.getOrElse("").replaceAll("_",""))</description>
             <pubDate>@rssDate(post.createdAt)</pubDate>
-            <link>http://vincent.jousse.org@jousse.controllers.routes.Blog.post(post.slug.get, getYear(post.createdAt), getMonth(post.createdAt))</link>
+            <link>http://vincent.jousse.org@jousse.controllers.routes.Blog.post(post.slug.get)</link>
         </item>}
     </channel>
 </rss>

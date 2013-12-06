@@ -4,8 +4,23 @@
 @import tags.postHeader
 
 @main("Sharing is caring", "/index") {
+
+<div class="row">
+    <div class="col-lg-offset-2 col-lg-8">
     @for(post <- posts) {
-        @postHeader(post.title, post.createdAt, post.content, true, post.slug, post.description)
+        @if(!post.slug.isEmpty) {
+            <h1><a href="@jousse.controllers.routes.Blog.post(post.slug.get)">@post.title</a></h1>
+        } else {
+            <h1>@post.title</h1>
+        }
+
+        <div class="post-data">Published on <span class="black">@formatDate(post.createdAt)</span> by <span class="black"><a href="http://twitter.com/vjousse">Vincent Jousse</a></span></div>
+
+        @Html(post.content)
+
         <hr />
     }
+
+    </div>
+</div>
 }

@@ -23,7 +23,7 @@ trait StringHelper {
 
   def slugify(text: String): String = Slugifier.slugify(text)
 
-  def formatDate(date: Time) = date format "dd/MM/yyy"
+  def formatDate(date: Time) = date format "yyy/MM/dd"
 
   def getYear(date: Time) = date format "yyy"
 
