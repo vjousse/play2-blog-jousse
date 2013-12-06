@@ -1,3 +1,0 @@
-- Eteindre notifications
-- Prendre le temps de passer d'une activité à l'autre
-- Ralentir

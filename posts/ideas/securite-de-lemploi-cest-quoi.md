@@ -1,3 +1,0 @@
-- Grosse entreprise ?
-- Capacité à changer souvent ?
-- Illusion !
