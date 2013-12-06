@@ -1,4 +1,4 @@
-@(parent: String, pages: List[(String, String)] = List(("Ideas", "ideas"), ("Code","code"), ("Research","research"), ("About","about")))
+@(parent: String, pages: List[(String, String)] = List(("Ideas", "ideas"), ("Code","code"), ("Research","research"), ("Open source","open-source"), ("About","about")))
 
 @current(route: String) = { @{if(parent == route || (parent + "/") == route || (parent.startsWith(route) && route != "/")) "class='current'" }}
 
