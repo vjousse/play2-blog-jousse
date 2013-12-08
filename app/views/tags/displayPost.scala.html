@@ -1,0 +1,13 @@
+@(post: jousse.blog.Post, link: Boolean = false)
+
+@import jousse.util.Templating._
+
+@if(!post.slug.isEmpty && link) {
+    <h1><a href="@jousse.controllers.routes.Blog.post(post.slug.get)">@post.title</a></h1>
+} else {
+    <h1>@post.title</h1>
+}
+
+<div class="post-data">Published on <span class="black">@formatDate(post.createdAt)</span> by <span class="black"><a href="http://twitter.com/vjousse">Vincent Jousse</a></span></div>
+
+@Html(post.content)

@@ -1,13 +1,12 @@
 @(post: jousse.blog.Post)
 
-@import tags.postHeader
+@import tags.displayPost
 
 @main(post.title, "/index") {
 
 <div class="row">
     <div class="col-lg-offset-2 col-lg-8">
-        @postHeader(post.title, post.createdAt, post.content)
-
+        @displayPost(post)
     </div>
 </div>
 }
