@@ -1,4 +1,4 @@
-title: "Archlinux on a Retina (HiDPI) MacBook Pro using Xmonad"
+title: "Using Archlinux on a Retina (HiDPI) MacBook Pro with Xmonad"
 date: "2012-12-08"
 ---
 
