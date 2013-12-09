@@ -12,6 +12,8 @@ To be able to access the installer without having glitches on your screen you ne
 
 In order to have the Grub menu showing up, I needed to install rEFInd under Mac OS X first, then to not press the Option (alt) button but let it boot under rEFInd. Then I choosed the "Boot Legacy OS From HD" option, the last one, with a grey icon. And, for whatever reason, it did the trick and I was able to boot under the grub menu and add `nomodeset` to the boot options.
 
+Then, regarding Internet access, I was using the "Thunderbolt to gigabit ethernet adapter" from Apple http://store.apple.com/us/product/MD463ZM/A/thunderbolt-to-gigabit-ethernet-adapter?fnode=51. Hot plugin the adapter is not supported, so you need to boot with the adapter plugged in. Later I installed the `broadcom-wl` package from AUR to have the Wireless card working. It worked out of the box (I'm using `Wicd` to manage my network).
+
 The current kernel is the 3.12 one and it doesn't support the Intel Iris Pro 5200 Graphic card. So for now, in order to have Xorg working, you will need to use the framebuffer (`fbdev`) driver. To do so I created a `/etc/X11/xorg.conf.d/1-monitor.conf` file with this content:
 
 ```
