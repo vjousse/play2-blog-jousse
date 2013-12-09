@@ -146,6 +146,12 @@ In __Thunderbird__, go to `Preferences` > `Advanced` and in `Advanced Configurat
 
 From time time I'm using Opera too. For Opera I've just changed the default Zoom value and it did the trick.
 
+One last thing, sometimes, Firefox is using ugly fonts to display web pages. To avoid that, you just have to disable bitmap fonts in X as mentionned on [the Arch wiki page](https://wiki.archlinux.org/index.php/firefox#Firefox_uses_ugly_fonts_on_certain_web_pages):
+
+```
+sudo ln -s /etc/fonts/conf.avail/70-no-bitmaps.conf /etc/fonts/conf.d/
+```
+
 
 ## Conclusion
 
