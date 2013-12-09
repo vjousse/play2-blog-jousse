@@ -5,7 +5,7 @@
 # Blog pages
 GET     /                                  jousse.controllers.Application.index()
 GET     /tech/                             jousse.controllers.Blog.tech()
-GET     /blog.rss                          jousse.controllers.Blog.rss()
+GET     /tech/feed.rss                     jousse.controllers.Blog.rss()
 
 GET     /tech/:slug/                       jousse.controllers.Blog.post(slug)
 

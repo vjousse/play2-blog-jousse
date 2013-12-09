@@ -15,7 +15,7 @@ object Blog extends CustomController {
 
   def rss() = Action {
       implicit request =>
-        Ok(blog.rss(env.postService.postList())).as("application/rss+xml")
+        Ok(blog.rss(env.postService.postList(Some(env.techPostsDirectory)))).as("application/rss+xml")
     }
 
   def tech() = Action {
