@@ -5,6 +5,7 @@ import scala.io.Source
 import java.io.File
 import play.api.libs.ws.WS
 import play.api.libs.concurrent.Execution.Implicits._
+import play.api.Play.current
 import scala.concurrent._
 import scala.concurrent.duration._
 
