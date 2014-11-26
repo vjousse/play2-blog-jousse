@@ -26,8 +26,8 @@ case class PostService(parser: Parser) {
     }
   }
 
-  def postFromFile(file: File): Validation[Exception, Post] = {
-    postFromMarkdown(Source.fromFile(file).getLines.toList,
+  def postFromFile(file: File, encoding: String = "utf-8"): Validation[Exception, Post] = {
+    postFromMarkdown(Source.fromFile(file, encoding).getLines.toList,
         unsafeOption(file.getName.substring(0,file.getName.lastIndexOf('.'))))
   }
 
