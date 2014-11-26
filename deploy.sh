@@ -25,7 +25,7 @@ RSYNC_OPTIONS=" \
 
 echo "Rsync scripts, binaries and assets"
 stage="target/universal/stage"
-rsync_command="rsync $RSYNC_OPTIONS $stage/bin $stage/lib public $REMOTE:$REMOTE_DIR"
+rsync_command="rsync $RSYNC_OPTIONS $stage/bin $stage/lib public posts $REMOTE:$REMOTE_DIR"
 echo "$rsync_command"
 $rsync_command
 
