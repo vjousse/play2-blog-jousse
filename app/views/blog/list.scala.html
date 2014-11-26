@@ -7,8 +7,12 @@
 
 <div class="row">
     <div class="col-lg-offset-2 col-lg-8">
-    @for(post <- posts) {
-        @displayPost(post, true)
+    @if(posts.length == 0) {
+        No post to display.
+    } else {
+        @for(post <- posts) {
+            @displayPost(post, true)
+        }
     }
 
     </div>

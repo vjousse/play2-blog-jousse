@@ -31,18 +31,16 @@ case class PostService(parser: Parser) {
         unsafeOption(file.getName.substring(0,file.getName.lastIndexOf('.'))))
   }
 
-  def postList(directory: Option[File] = None): List[Post] = {
+  def postList(directory: File): List[Post] = {
 
-    //create a FilenameFilter and override its accept-method
-    val filefilter = new FilenameFilter() {
-      //only accept files ending by .md
-      def accept(dir: File, name: String) = name.endsWith(".md")
-    }
+    def isMarkdownFile(file: File): Boolean = !file.isDirectory && file.getName().toLowerCase().endsWith(".md")
 
-    val files: List[File] = directory.map(d =>
-        d.listFiles.filter(
-      file => (!file.isDirectory && file.getName().endsWith(".md"))
-    )) map { _.toList } getOrElse (Nil)
+    val files: List[File] =
+        (for {
+          files <- Option(directory.listFiles)
+          filteredFiles = files.filter(isMarkdownFile)
+        } yield filteredFiles.toList) getOrElse Nil
+
 
     (files.map { file ⇒
       postFromFile(file)

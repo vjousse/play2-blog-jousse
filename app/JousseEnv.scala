@@ -7,7 +7,7 @@ import blog.{PostService, PegDownParser}
 class JousseEnv(configuration: Configuration) {
 
   def remoteParserUrl: Option[String] = conf("blog.remoteParserUrl")
-  def techPostsDirectory: File = new File(confUnsafe("blog.techPostsDirectory"))
+  def techPostsDirectory: Option[File] = conf("blog.techPostsDirectory").map { s => new File(s) }
   //def parser: RemoteParser = RemoteParser(remoteParserUrl getOrElse "http://localhost:9001/")
   //def parser: ActuariusParser = ActuariusParser()
   def parser: PegDownParser = PegDownParser()
