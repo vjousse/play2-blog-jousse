@@ -33,7 +33,7 @@ case class PostService(parser: Parser) {
 
   def postList(directory: File): List[Post] = {
 
-    def isMarkdownFile(file: File): Boolean = !file.isDirectory && file.getName().toLowerCase().endsWith(".md")
+    def isMarkdownFile(file: File): Boolean = !file.isDirectory && file.getName.toLowerCase.endsWith(".md")
 
     val files: List[File] =
         (for {
