@@ -1,4 +1,4 @@
-title: "Installing ATLAS for Kaldi by disabling CPU Throttling"
+title: "Installing ATLAS for Kaldi by disabling CPU Throttling on Archlinux"
 date: "2015-04-26"
 ---
 
