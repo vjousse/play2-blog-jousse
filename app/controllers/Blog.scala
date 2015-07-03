@@ -25,7 +25,7 @@ object Blog extends CustomController {
       implicit request =>
         env.techPostsDirectory match {
           case Some(d) => Ok(blog.list(env.postService.postList(d)))
-          case None => Ok(blog.list(Nil)).as("application/rss+xml")
+          case None => NotFound(views.html.error404())
         }
     }
 
