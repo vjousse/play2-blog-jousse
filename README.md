@@ -4,6 +4,8 @@ Install sbt and run it in the project folder.
 
     sbt run
 
+Copy the `conf/application.conf.dist` to `conf/application.conf` and change the default values as needed.
+
 # Deploy
 
 Tweak the `deploy.sh` script and run it. Be sure to have the same JVM version on the client and on the server.
